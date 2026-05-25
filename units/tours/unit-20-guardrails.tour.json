@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-guardrails",
+    "title": "AI Guardrails Tour",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-guardrails",
+            "title": "Why Guardrails?",
+            "text": "Without guardrails, AI applications risk leaking PII, forwarding toxic content, and falling victim to prompt injection attacks. Guardrails automatically detect, redact, and block unsafe content before it reaches users or storage.",
+            "attachTo": { "element": "#why-guardrails-matter", "on": "bottom" }
+        },
+        {
+            "id": "pii-detection",
+            "title": "PII Detection and Redaction",
+            "text": "The PiiDetector uses compiled regex patterns to find and redact 6 PII types: email, phone, credit card, SSN, IP address, and IBAN. Each gets a typed placeholder like [REDACTED_EMAIL] for easy identification.",
+            "attachTo": { "element": "#lesson-322-pii-detection--redaction", "on": "bottom" }
+        },
+        {
+            "id": "toxicity",
+            "title": "Toxicity Filtering",
+            "text": "ToxicityFilter uses word-boundary matching against a configurable blocklist of 25+ terms. It replaces matches with a configurable placeholder while avoiding false positives on substrings.",
+            "attachTo": { "element": "#lesson-323-toxicity-filtering", "on": "bottom" }
+        },
+        {
+            "id": "prompt-injection",
+            "title": "Prompt Injection Defense",
+            "text": "PromptInjectionDetector catches 5 attack categories: instruction override, role override, system prompt injection, code block injection, and base64 payloads. Injections are blocked entirely, never sanitized.",
+            "attachTo": { "element": "#lesson-324-prompt-injection-detection", "on": "bottom" }
+        },
+        {
+            "id": "pipeline-chaining",
+            "title": "GuardrailPipeline: Chaining It All",
+            "text": "GuardrailPipeline chains multiple guardrails in sequence. Sanitized content from PII detection flows into toxicity filtering, then prompt injection detection. The pipeline result includes total violations, highest severity, and final safe content.",
+            "attachTo": { "element": "#lesson-325-content-policy--pipeline", "on": "bottom" }
+        }
+    ]
+}

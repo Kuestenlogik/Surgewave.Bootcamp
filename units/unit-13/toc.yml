@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Hosted Services"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Dependency Injection"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Health Checks"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Middleware & Endpoints"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Background Processing"
+      href: lesson-5/README.md

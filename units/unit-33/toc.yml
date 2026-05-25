@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Performance Fundamentals"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Producer Optimization"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Consumer Optimization"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Memory Management & GC Tuning"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Benchmarking & Profiling"
+      href: lesson-5/README.md

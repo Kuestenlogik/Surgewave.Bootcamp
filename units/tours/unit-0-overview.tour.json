@@ -1,0 +1,30 @@
+{
+    "id": "bootcamp-welcome",
+    "title": "Welcome to Surgewave Bootcamp",
+    "triggerMode": "auto-first-visit",
+    "steps": [
+        {
+            "id": "welcome",
+            "title": "Welcome!",
+            "text": "Welcome to the Surgewave Bootcamp! This is Unit 0 — your starting point for learning Surgewave."
+        },
+        {
+            "id": "objectives",
+            "title": "Learning Objectives",
+            "text": "Each unit starts with clear learning objectives so you know what you'll master.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        },
+        {
+            "id": "lessons",
+            "title": "Lessons",
+            "text": "Units are divided into lessons. Work through them in order for the best learning experience.",
+            "attachTo": { "element": "article table", "on": "bottom" }
+        },
+        {
+            "id": "navigation",
+            "title": "Navigation",
+            "text": "Use the sidebar to navigate between units and lessons. Check the Learning Paths page to find the best path for your role.",
+            "attachTo": { "element": "#toc", "on": "right" }
+        }
+    ]
+}

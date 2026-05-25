@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="SurgewaveMart.Shared\SurgewaveMart.Shared.csproj" />
+  <Project Path="SurgewaveMart.Orders\SurgewaveMart.Orders.csproj" />
+  <Project Path="SurgewaveMart.Payments\SurgewaveMart.Payments.csproj" />
+  <Project Path="SurgewaveMart.Inventory\SurgewaveMart.Inventory.csproj" />
+  <Project Path="SurgewaveMart.Analytics\SurgewaveMart.Analytics.csproj" />
+  <Project Path="SurgewaveMart.Api\SurgewaveMart.Api.csproj" />
+</Solution>

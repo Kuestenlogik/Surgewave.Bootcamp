@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-gateway",
+    "title": "gRPC/REST Gateway",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "gateway-architecture",
+            "title": "Gateway Architecture",
+            "text": "The Surgewave Gateway exposes REST endpoints, gRPC services, and WebSocket handlers that connect external clients to Surgewave brokers through a unified interface.",
+            "attachTo": { "element": "#gateway-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "protocol-comparison",
+            "title": "Protocol Comparison",
+            "text": "REST offers universal compatibility and easy debugging. gRPC provides compact binary streaming. WebSocket enables real-time bidirectional communication.",
+            "attachTo": { "element": "#protocol-comparison", "on": "bottom" }
+        },
+        {
+            "id": "confluent-api",
+            "title": "Confluent v3 API Compatibility",
+            "text": "Surgewave implements the Confluent REST Proxy v3 API for cluster, topic, producer, consumer, and consumer group operations, enabling drop-in compatibility.",
+            "attachTo": { "element": "#confluent-v3-api-compatibility", "on": "bottom" }
+        },
+        {
+            "id": "websocket",
+            "title": "WebSocket Streaming",
+            "text": "Subscribe to topics in real-time via WebSocket. The protocol supports ping/pong heartbeats, topic subscriptions, message production, and offset commits.",
+            "attachTo": { "element": "#websocket-message-protocol", "on": "bottom" }
+        },
+        {
+            "id": "key-concepts",
+            "title": "Key Concepts",
+            "text": "The gateway supports multi-cluster routing, JSON transcoding between gRPC and REST, and WebSocket subscriptions for real-time browser applications.",
+            "attachTo": { "element": "#key-concepts", "on": "bottom" }
+        }
+    ]
+}

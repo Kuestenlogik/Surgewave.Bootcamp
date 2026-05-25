@@ -1,0 +1,16 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: OpenAI Embeddings with Surgewave"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Ollama Local LLM Integration"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Vector Databases - Qdrant"
+      href: lesson-3/README.md
+    - name: "Lesson 4: RAG Pipeline Architecture"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Semantic Search Implementation"
+      href: lesson-5/README.md
+    - name: "Lesson 6: ONNX ML Scoring in Pipelines"
+      href: lesson-6/README.md

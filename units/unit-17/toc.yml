@@ -1,0 +1,22 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 17.1: Pipeline Anatomy"
+      href: lesson-1/README.md
+    - name: "Lesson 17.2: Node Types & Categories"
+      href: lesson-2/README.md
+    - name: "Lesson 17.3: Building Your First Pipeline"
+      href: lesson-3/README.md
+    - name: "Lesson 17.4: Building a RAG Pipeline"
+      href: lesson-4/README.md
+    - name: "Lesson 17.5: Building an Agent Pipeline"
+      href: lesson-5/README.md
+    - name: "Lesson 17.6: Workflow Patterns"
+      href: lesson-6/README.md
+    - name: "Lesson 17.7: Pipeline Chat & Streaming"
+      href: lesson-7/README.md
+    - name: "Lesson 17.8: Advanced Pipeline Features"
+      href: lesson-8/README.md
+    - name: "Lesson 17.9: Debugging Pipelines"
+      href: lesson-9/README.md

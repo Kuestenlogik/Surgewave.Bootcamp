@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-large-messages",
+    "title": "Large Message Handling",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-limits",
+            "title": "Why Message Size Limits Exist",
+            "text": "Large messages cause memory pressure on brokers, increase network latency, slow replica synchronization, and can block consumer processing.",
+            "attachTo": { "element": "#why-message-size-limits-exist", "on": "bottom" }
+        },
+        {
+            "id": "strategy-selection",
+            "title": "Choosing a Strategy",
+            "text": "Under 1 MB: send directly. Between 1-10 MB: try compression first. Over 10 MB: use claim-check for batch processing or streaming for real-time needs.",
+            "attachTo": { "element": "#strategy-selection-guide", "on": "bottom" }
+        },
+        {
+            "id": "compression",
+            "title": "Compression Trade-offs",
+            "text": "LZ4 and Snappy are fast with low CPU cost. GZIP offers 4:1 ratio for bandwidth-constrained scenarios. ZSTD provides the best overall balance of speed and compression.",
+            "attachTo": { "element": "#compression-trade-offs", "on": "bottom" }
+        },
+        {
+            "id": "chunking",
+            "title": "Message Chunking",
+            "text": "Split oversized payloads into smaller chunks with sequence numbers and message IDs. Consumers reassemble chunks in order using the chunk header metadata.",
+            "attachTo": { "element": "#chunked-message-header", "on": "bottom" }
+        },
+        {
+            "id": "claim-check",
+            "title": "Claim-Check Pattern",
+            "text": "Store large payloads in external storage like S3 or Azure Blob, then send a lightweight reference message through Surgewave. Consumers fetch the full data on demand.",
+            "attachTo": { "element": "#claim-check-reference", "on": "bottom" }
+        }
+    ]
+}

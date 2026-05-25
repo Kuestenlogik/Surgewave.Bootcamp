@@ -1,0 +1,16 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Producing Messages"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Consuming Messages"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Consumer Groups"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Partitioning"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Batching & Message Sizing"
+      href: lesson-5/README.md
+    - name: "Lesson 6: Message Best Practices"
+      href: lesson-6/README.md

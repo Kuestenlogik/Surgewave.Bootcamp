@@ -1,0 +1,35 @@
+{
+    "build": {
+        "content": [
+            {
+                "files": [
+                    "units/**/README.md",
+                    "units/**/INSTRUCTIONS.md",
+                    "units/**/KNOWLEDGE_ASSESSMENT.md",
+                    "units/**/toc.yml",
+                    "capstone/**/README.md",
+                    "capstone/**/REQUIREMENTS.md",
+                    "capstone/**/ARCHITECTURE.md",
+                    "capstone/**/toc.yml",
+                    "LEARNING_PATHS.md",
+                    "units-overview.md",
+                    "toc.yml",
+                    "index.md"
+                ],
+                "src": ".."
+            }
+        ],
+        "resource": [
+            { "files": ["images/**"], "src": "." }
+        ],
+        "dest": "../artifacts/docs-learn",
+        "template": ["default", "modern", "templates/shepherd"],
+        "globalMetadata": {
+            "_appTitle": "Surgewave Bootcamp",
+            "_appName": "Surgewave Learn",
+            "_enableSearch": true,
+            "_disableContribution": true
+        },
+        "postProcessors": ["ExtractSearchIndex"]
+    }
+}

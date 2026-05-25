@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: MCP Protocol Basics"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Surgewave MCP Server Setup"
+      href: lesson-2/README.md
+    - name: "Lesson 3: MCP Tools Implementation"
+      href: lesson-3/README.md
+    - name: "Lesson 4: AI Agent Integration - Claude Desktop"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Building Custom AI Agents"
+      href: lesson-5/README.md

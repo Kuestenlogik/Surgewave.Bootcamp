@@ -1,0 +1,18 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 20.1: Content Safety with Guardrails"
+      href: lesson-1/README.md
+    - name: "Lesson 20.2: PII Detection & Redaction"
+      href: lesson-2/README.md
+    - name: "Lesson 20.3: Toxicity Filtering"
+      href: lesson-3/README.md
+    - name: "Lesson 20.4: Prompt Injection Detection"
+      href: lesson-4/README.md
+    - name: "Lesson 20.5: Content Policy & Pipeline"
+      href: lesson-5/README.md
+    - name: "Lesson 20.6: Agent Memory"
+      href: lesson-6/README.md
+    - name: "Lesson 20.7: Tool Result Caching"
+      href: lesson-7/README.md

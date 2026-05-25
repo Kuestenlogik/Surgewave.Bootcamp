@@ -1,0 +1,8 @@
+- name: Home
+  href: index.md
+- name: Learning Paths
+  href: LEARNING_PATHS.md
+- name: Units
+  href: units-overview.md
+- name: Capstone
+  href: capstone/README.md

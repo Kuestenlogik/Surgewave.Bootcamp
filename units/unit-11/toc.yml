@@ -1,0 +1,16 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Kafka Compatibility"
+      href: lesson-1/README.md
+    - name: "Lesson 2: API Wrapper Migration"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Hybrid Deployments"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Production Cutover"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Hybrid Deployment Patterns"
+      href: lesson-5/README.md
+    - name: "Lesson 6: Performance Comparison & Validation"
+      href: lesson-6/README.md

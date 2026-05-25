@@ -1,0 +1,113 @@
+# Unit 14 Project: Kubernetes Services - COMPLETED
+# Define network access for Surgewave components
+
+# Headless service for Surgewave broker StatefulSet
+# Enables DNS-based discovery: surgewave-broker-0.surgewave-broker.default.svc.cluster.local
+apiVersion: v1
+kind: Service
+metadata:
+  name: surgewave-broker
+  labels:
+    app: surgewave
+    component: broker
+spec:
+  clusterIP: None  # Headless service for StatefulSet
+  publishNotReadyAddresses: true  # Allow discovery during startup
+
+  ports:
+    - name: client
+      port: 9092
+      targetPort: 9092
+      protocol: TCP
+    - name: inter-broker
+      port: 9093
+      targetPort: 9093
+      protocol: TCP
+
+  selector:
+    app: surgewave
+    component: broker
+
+---
+# ClusterIP service for Surgewave broker client connections
+# Use this for services that just need to connect to any broker
+apiVersion: v1
+kind: Service
+metadata:
+  name: surgewave-broker-client
+  labels:
+    app: surgewave
+    component: broker
+spec:
+  type: ClusterIP
+
+  ports:
+    - name: client
+      port: 9092
+      targetPort: 9092
+      protocol: TCP
+
+  selector:
+    app: surgewave
+    component: broker
+
+---
+# ClusterIP service for notification service
+apiVersion: v1
+kind: Service
+metadata:
+  name: notification-svc
+  labels:
+    app: surgewave
+    component: notification
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9090"
+    prometheus.io/path: "/metrics"
+spec:
+  type: ClusterIP
+
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+    - name: metrics
+      port: 9090
+      targetPort: 9090
+      protocol: TCP
+
+  selector:
+    app: surgewave
+    component: notification
+
+---
+# LoadBalancer service for external access (optional)
+# Uncomment for cloud deployments or use Ingress instead
+apiVersion: v1
+kind: Service
+metadata:
+  name: notification-external
+  labels:
+    app: surgewave
+    component: notification
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: "true"
+spec:
+  type: LoadBalancer
+
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      protocol: TCP
+
+  selector:
+    app: surgewave
+    component: notification
+
+  # Limit external access to specific IPs (optional)
+  # loadBalancerSourceRanges:
+  #   - 10.0.0.0/8
+  #   - 192.168.0.0/16

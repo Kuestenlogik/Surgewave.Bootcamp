@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Connect Concepts"
+      href: lesson-1/README.md
+    - name: "Lesson 2: File Connectors"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Database Connectors"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Change Data Capture"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Custom Connectors"
+      href: lesson-5/README.md

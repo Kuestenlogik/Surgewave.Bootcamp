@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Backup Strategies"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Cross-Datacenter Replication"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Failover Procedures"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Data Recovery"
+      href: lesson-4/README.md
+    - name: "Lesson 5: DR Testing"
+      href: lesson-5/README.md

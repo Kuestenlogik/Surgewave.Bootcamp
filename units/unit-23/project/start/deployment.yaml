@@ -1,0 +1,158 @@
+# Unit 14 Project: Kubernetes Deployments
+# Deploy Surgewave broker and notification service
+
+# TODO: Create StatefulSet for Surgewave broker
+# StatefulSets provide stable network identities and persistent storage
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: surgewave-broker
+  labels:
+    app: surgewave
+    component: broker
+spec:
+  serviceName: surgewave-broker
+  replicas: 3
+  selector:
+    matchLabels:
+      app: surgewave
+      component: broker
+  template:
+    metadata:
+      labels:
+        app: surgewave
+        component: broker
+    spec:
+      containers:
+        - name: broker
+          image: surgewave-broker:latest
+          # TODO: Add image pull policy
+          # imagePullPolicy: IfNotPresent
+
+          ports:
+            - name: client
+              containerPort: 9092
+            # TODO: Add inter-broker port
+            # - name: inter-broker
+            #   containerPort: 9093
+
+          # TODO: Add environment variables from ConfigMap
+          # envFrom:
+          #   - configMapRef:
+          #       name: surgewave-broker-config
+
+          # TODO: Add environment variable for broker ID from field
+          # env:
+          #   - name: Surgewave_BROKER_ID
+          #     valueFrom:
+          #       fieldRef:
+          #         fieldPath: metadata.name
+
+          # TODO: Add resource limits
+          # resources:
+          #   requests:
+          #     cpu: "100m"
+          #     memory: "512Mi"
+          #   limits:
+          #     cpu: "500m"
+          #     memory: "1Gi"
+
+          # TODO: Add liveness probe
+          # livenessProbe:
+          #   tcpSocket:
+          #     port: 9092
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 10
+
+          # TODO: Add readiness probe
+          # readinessProbe:
+          #   tcpSocket:
+          #     port: 9092
+          #   initialDelaySeconds: 10
+          #   periodSeconds: 5
+
+          # TODO: Add volume mounts
+          # volumeMounts:
+          #   - name: data
+          #     mountPath: /var/surgewave/data
+
+  # TODO: Add volume claim templates for persistent storage
+  # volumeClaimTemplates:
+  #   - metadata:
+  #       name: data
+  #     spec:
+  #       accessModes: ["ReadWriteOnce"]
+  #       resources:
+  #         requests:
+  #           storage: 10Gi
+
+---
+# TODO: Create Deployment for notification service
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-svc
+  labels:
+    app: surgewave
+    component: notification
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: surgewave
+      component: notification
+  template:
+    metadata:
+      labels:
+        app: surgewave
+        component: notification
+    spec:
+      containers:
+        - name: notification
+          image: notification-service:latest
+          # TODO: Add image pull policy
+          # imagePullPolicy: IfNotPresent
+
+          ports:
+            - name: http
+              containerPort: 8080
+
+          # TODO: Add environment variables from ConfigMap
+          # envFrom:
+          #   - configMapRef:
+          #       name: surgewave-config
+
+          # TODO: Add resource limits
+          # resources:
+          #   requests:
+          #     cpu: "100m"
+          #     memory: "256Mi"
+          #   limits:
+          #     cpu: "500m"
+          #     memory: "512Mi"
+
+          # TODO: Add liveness probe
+          # livenessProbe:
+          #   httpGet:
+          #     path: /health/live
+          #     port: 8080
+          #   initialDelaySeconds: 10
+          #   periodSeconds: 10
+
+          # TODO: Add readiness probe
+          # readinessProbe:
+          #   httpGet:
+          #     path: /health/ready
+          #     port: 8080
+          #   initialDelaySeconds: 5
+          #   periodSeconds: 5
+
+          # TODO: Add startup probe for slow-starting containers
+          # startupProbe:
+          #   httpGet:
+          #     path: /health/live
+          #     port: 8080
+          #   failureThreshold: 30
+          #   periodSeconds: 10

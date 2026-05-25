@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-advanced-streams",
+    "title": "Advanced Streams Tour",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "fk-joins",
+            "title": "Foreign Key Table-Table Joins",
+            "text": "Standard joins require matching keys. FK joins let you join tables by a non-key field, like joining Orders (keyed by OrderId) with Customers (keyed by CustomerId) using the Order's CustomerId field.",
+            "attachTo": { "element": "#lesson-294-foreign-key-table-table-joins", "on": "bottom" }
+        },
+        {
+            "id": "lifecycle-hooks",
+            "title": "Processor Lifecycle Hooks",
+            "text": "The IProcessorLifecycle interface provides OnInit and OnClose hooks for managing external resources like HTTP clients and database connections. The ShutdownOrchestrator closes nodes in reverse-topological order.",
+            "attachTo": { "element": "#lesson-291-processor-lifecycle-hooks", "on": "bottom" }
+        },
+        {
+            "id": "metrics",
+            "title": "Per-Processor Metrics",
+            "text": "Each processor node tracks records in/out, processing latency, and error counts via OpenTelemetry. State stores expose put, get, and delete latencies plus entry counts for capacity monitoring.",
+            "attachTo": { "element": "#lesson-292-per-processor-metrics", "on": "bottom" }
+        },
+        {
+            "id": "backpressure",
+            "title": "Backpressure and Flow Control",
+            "text": "BackpressureBuffer uses System.Threading.Channels to bound internal buffers between nodes. High and low watermarks prevent oscillation, and three strategies (Block, DropOldest, DropNewest) handle buffer-full conditions.",
+            "attachTo": { "element": "#lesson-293-backpressure--flow-control", "on": "bottom" }
+        },
+        {
+            "id": "retry",
+            "title": "Retry with Backoff",
+            "text": "The WithRetry API adds configurable retry logic for processors that call external services. Four backoff strategies are available: Fixed, Linear, Exponential, and ExponentialWithJitter to prevent thundering herd.",
+            "attachTo": { "element": "#lesson-295-retry--backoff-integration", "on": "bottom" }
+        }
+    ]
+}

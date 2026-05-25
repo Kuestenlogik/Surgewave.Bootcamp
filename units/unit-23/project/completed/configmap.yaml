@@ -1,0 +1,81 @@
+# Unit 14 Project: Kubernetes ConfigMap - COMPLETED
+# Configure Surgewave application settings
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: surgewave-config
+  labels:
+    app: surgewave
+    component: config
+data:
+  # Surgewave connection settings
+  Surgewave_BOOTSTRAP_SERVERS: "surgewave-broker:9092"
+
+  # Topic configuration
+  Surgewave_TOPICS: "notifications-email,notifications-sms,notifications-push"
+  Surgewave_PARTITIONS: "3"
+  Surgewave_REPLICATION_FACTOR: "3"
+
+  # Consumer settings
+  Surgewave_CONSUMER_GROUP: "notification-service"
+  Surgewave_AUTO_OFFSET_RESET: "earliest"
+  Surgewave_ENABLE_AUTO_COMMIT: "true"
+  Surgewave_AUTO_COMMIT_INTERVAL_MS: "5000"
+
+  # Producer settings
+  Surgewave_ACKS: "all"
+  Surgewave_RETRIES: "3"
+  Surgewave_BATCH_SIZE: "16384"
+  Surgewave_LINGER_MS: "5"
+
+  # Application settings
+  LOG_LEVEL: "Information"
+  API_PORT: "8080"
+  METRICS_PORT: "9090"
+
+  # Health check settings
+  HEALTH_CHECK_INTERVAL_SECONDS: "30"
+  HEALTH_CHECK_TIMEOUT_SECONDS: "10"
+
+---
+# ConfigMap for Surgewave broker configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: surgewave-broker-config
+  labels:
+    app: surgewave
+    component: broker
+data:
+  # Broker identification (will be overridden by StatefulSet ordinal)
+  Surgewave_BROKER_ID: "auto"
+
+  # Storage directories
+  Surgewave_DATA_DIR: "/var/surgewave/data"
+  Surgewave_LOG_DIR: "/var/surgewave/logs"
+
+  # Network settings
+  Surgewave_LISTENERS: "PLAINTEXT://:9092"
+  Surgewave_INTER_BROKER_LISTENER: "PLAINTEXT://:9093"
+  Surgewave_ADVERTISED_LISTENERS: "PLAINTEXT://$(POD_NAME).surgewave-broker:9092"
+
+  # Cluster settings
+  Surgewave_NUM_PARTITIONS: "3"
+  Surgewave_DEFAULT_REPLICATION_FACTOR: "3"
+  Surgewave_MIN_INSYNC_REPLICAS: "2"
+
+  # Performance tuning
+  Surgewave_NUM_NETWORK_THREADS: "3"
+  Surgewave_NUM_IO_THREADS: "8"
+  Surgewave_SOCKET_SEND_BUFFER_BYTES: "102400"
+  Surgewave_SOCKET_RECEIVE_BUFFER_BYTES: "102400"
+  Surgewave_SOCKET_REQUEST_MAX_BYTES: "104857600"
+
+  # Log retention
+  Surgewave_LOG_RETENTION_HOURS: "168"
+  Surgewave_LOG_RETENTION_BYTES: "1073741824"
+  Surgewave_LOG_SEGMENT_BYTES: "1073741824"
+
+  # Logging
+  LOG_LEVEL: "Information"

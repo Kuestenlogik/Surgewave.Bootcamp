@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-perf-engineering",
+    "title": "Performance Engineering",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "performance-goals",
+            "title": "Performance Goals",
+            "text": "Surgewave targets 1M+ messages per second, sub-millisecond P50 latency, under 10ms P99, and zero heap allocations on the produce and fetch hot paths.",
+            "attachTo": { "element": "#performance-goals", "on": "bottom" }
+        },
+        {
+            "id": "hot-paths",
+            "title": "The Hot Paths",
+            "text": "The produce and fetch hot paths are the critical performance paths. Every allocation on these paths creates GC pressure that causes P99 latency spikes.",
+            "attachTo": { "element": "#the-hot-paths", "on": "bottom" }
+        },
+        {
+            "id": "zero-alloc",
+            "title": "Zero-Allocation Patterns",
+            "text": "Use Span<T> for stack-only views, stackalloc for small temporary buffers, ArrayPool for large buffers, ObjectPool for complex objects, and ValueTask for sync-fast paths.",
+            "attachTo": { "element": "#lesson-332-zero-allocation-patterns", "on": "bottom" }
+        },
+        {
+            "id": "simd",
+            "title": "SIMD and Hardware Acceleration",
+            "text": "Surgewave uses SSE4.2 intrinsics for CRC32C checksums at one cycle per byte and Vector<T> SIMD for cosine similarity at 8 floats per instruction on AVX2.",
+            "attachTo": { "element": "#lesson-333-simd--hardware-acceleration", "on": "bottom" }
+        },
+        {
+            "id": "regression-suite",
+            "title": "Performance Regression Suite",
+            "text": "The regression detector compares BenchmarkDotNet results against baselines with configurable thresholds. It generates Markdown reports and fails CI on detected regressions.",
+            "attachTo": { "element": "#lesson-336-performance-regression-suite", "on": "bottom" }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-data-integration",
+    "title": "Data Integration with Connectors",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "overview",
+            "title": "Source and Sink Connectors",
+            "text": "Data integration moves data in and out of Surgewave. Source connectors ingest external data into topics, while sink connectors export topic data to external systems.",
+            "attachTo": { "element": "#overview", "on": "bottom" }
+        },
+        {
+            "id": "source-vs-sink",
+            "title": "Source vs Sink",
+            "text": "Sources read from external systems like files and databases into Surgewave topics. Sinks write from Surgewave topics out to databases, files, and other destinations.",
+            "attachTo": { "element": "#source-vs-sink", "on": "bottom" }
+        },
+        {
+            "id": "connector-modes",
+            "title": "Connector Modes",
+            "text": "Choose between bulk mode for one-time full loads, incremental mode for ongoing synchronization, and CDC mode for capturing every database change in real-time.",
+            "attachTo": { "element": "#connector-modes", "on": "bottom" }
+        },
+        {
+            "id": "key-concepts",
+            "title": "Key Concepts",
+            "text": "Lesson 8.2 covers file connectors for CSV and JSON, Lesson 8.3 covers database connectors, and Lesson 8.4 dives into Change Data Capture patterns.",
+            "attachTo": { "element": "#key-concepts", "on": "bottom" }
+        },
+        {
+            "id": "custom-connectors",
+            "title": "Building Custom Connectors",
+            "text": "Lesson 8.5 teaches you to build your own connectors for any data source or sink, extending Surgewave's integration capabilities to fit your specific needs.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        }
+    ]
+}

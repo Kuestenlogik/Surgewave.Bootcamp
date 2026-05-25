@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Unit Testing Basics"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Mocking & Isolation"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Integration Testing"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Testcontainers"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Benchmarking"
+      href: lesson-5/README.md

@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Topic Design"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Partitioning Strategies"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Event Schema Design"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Event-Driven Patterns"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Capacity Planning"
+      href: lesson-5/README.md

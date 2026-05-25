@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: "Lesson 27.1: Zero-Disk Architecture"
+  href: lesson-1/README.md
+- name: "Lesson 27.2: S3-Direct Storage"
+  href: lesson-2/README.md
+- name: "Lesson 27.3: Azure Blob Storage"
+  href: lesson-3/README.md
+- name: "Lesson 27.4: GCP Cloud Storage"
+  href: lesson-4/README.md
+- name: "Lesson 27.5: Hybrid Storage Strategies"
+  href: lesson-5/README.md
+- name: "Lesson 27.6: Alternative Storage Engines"
+  href: lesson-6/README.md

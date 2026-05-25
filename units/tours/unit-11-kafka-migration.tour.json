@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-kafka-migration",
+    "title": "Migrating from Kafka to Surgewave",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-migrate",
+            "title": "Why Migrate to Surgewave?",
+            "text": "Surgewave eliminates the JVM dependency, ZooKeeper complexity, and operational overhead of Kafka while providing first-class .NET support and a single-binary deployment.",
+            "attachTo": { "element": "#why-migrate-to-surgewave", "on": "bottom" }
+        },
+        {
+            "id": "protocol-compat",
+            "title": "Protocol Compatibility",
+            "text": "Surgewave speaks the Kafka protocol natively. Point your existing Kafka clients at a Surgewave broker by simply changing the bootstrap servers address.",
+            "attachTo": { "element": "#option-1-protocol-compatibility", "on": "bottom" }
+        },
+        {
+            "id": "api-wrapper",
+            "title": "API Wrapper Migration",
+            "text": "Replace the Confluent.Kafka NuGet package with Surgewave's compatible wrapper. Your existing code stays the same while running on Surgewave's high-performance engine.",
+            "attachTo": { "element": "#option-2-api-wrapper", "on": "bottom" }
+        },
+        {
+            "id": "native-client",
+            "title": "Native Surgewave Client",
+            "text": "For best performance, rewrite to use the native Surgewave client API. This gives you access to Surgewave-specific features and optimized throughput.",
+            "attachTo": { "element": "#option-3-native-surgewave-client", "on": "bottom" }
+        },
+        {
+            "id": "migration-path",
+            "title": "Migration Path",
+            "text": "Follow a phased approach: test compatibility first, then run a hybrid deployment alongside Kafka, and finally perform a full cutover when ready.",
+            "attachTo": { "element": "#migration-path", "on": "bottom" }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-reactive",
+    "title": "Reactive Integration",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-reactive",
+            "title": "Why Reactive Integration?",
+            "text": "Reactive programming provides composable, fluent pipelines with unified error handling, backpressure support, and clean subscription lifecycle management.",
+            "attachTo": { "element": "#why-reactive-integration", "on": "bottom" }
+        },
+        {
+            "id": "observer-pattern",
+            "title": "The Observer Pattern",
+            "text": "IObservable represents a push-based data source while IObserver receives notifications via OnNext, OnError, and OnCompleted callbacks.",
+            "attachTo": { "element": "#the-observer-pattern", "on": "bottom" }
+        },
+        {
+            "id": "surgewave-reactive",
+            "title": "Surgewave as Observable",
+            "text": "Convert Surgewave consumers into IObservable sequences, then chain reactive operators like Filter, Map, and Buffer for declarative stream processing.",
+            "attachTo": { "element": "#surgewave--reactive", "on": "bottom" }
+        },
+        {
+            "id": "custom-operators",
+            "title": "Custom Operators",
+            "text": "Implement your own reactive operators using built-in .NET types. This unit uses only IObservable, IObserver, and IDisposable -- no external packages required.",
+            "attachTo": { "element": "#built-in-net-reactive-types", "on": "bottom" }
+        },
+        {
+            "id": "decision-framework",
+            "title": "Decision Framework",
+            "text": "Consider push vs pull consumption, backpressure strategy, needed operators, error handling, and subscription lifecycle when designing reactive Surgewave pipelines.",
+            "attachTo": { "element": "#decision-framework", "on": "bottom" }
+        }
+    ]
+}

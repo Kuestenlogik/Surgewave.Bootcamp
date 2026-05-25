@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-object-store",
+    "title": "Object Store and Zero-Disk Mode",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-object-store",
+            "title": "Local Disk vs Object Store",
+            "text": "Object stores like S3 and Azure Blob offer virtually unlimited capacity with 11-nines durability and pay-per-use pricing, trading latency (5-50ms) for elastic scalability.",
+            "attachTo": { "element": "#why-object-store-storage", "on": "bottom" }
+        },
+        {
+            "id": "zero-disk",
+            "title": "Zero-Disk Architecture",
+            "text": "In zero-disk mode, the Surgewave broker becomes stateless by writing segments directly to object storage. This enables easy horizontal scaling and instant instance replacement.",
+            "attachTo": { "element": "#zero-disk-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "hybrid-storage",
+            "title": "Hybrid Storage Strategies",
+            "text": "Most production deployments benefit from hybrid: fast local NVMe for recent hot data and cheap object storage for older cold data, with age-based or size-based tiering policies.",
+            "attachTo": { "element": "#lesson-305-hybrid-storage-strategies", "on": "bottom" }
+        },
+        {
+            "id": "alt-engines",
+            "title": "Alternative Storage Engines",
+            "text": "Surgewave supports pluggable engines: RocksDB for high write throughput, SQLite for edge deployments, DuckDB for OLAP queries, LMDB for ultra-fast reads, and NVMe-Direct for raw performance.",
+            "attachTo": { "element": "#lesson-306-alternative-storage-engines", "on": "bottom" }
+        },
+        {
+            "id": "best-practices",
+            "title": "Best Practices",
+            "text": "Start with local disk and tier later, use managed identity in cloud, set lifecycle policies, monitor egress costs, and always benchmark with your actual workload before committing.",
+            "attachTo": { "element": "#best-practices", "on": "bottom" }
+        }
+    ]
+}

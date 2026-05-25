@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-pipeline-ui",
+    "title": "Visual Pipeline Editor Tour",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "what-is-pipeline",
+            "title": "What Is a Visual Pipeline?",
+            "text": "A visual pipeline is a data processing workflow represented as a DAG (Directed Acyclic Graph). You build pipelines by dragging nodes onto a canvas and connecting them, without writing code.",
+            "attachTo": { "element": "#why-visual-pipelines", "on": "bottom" }
+        },
+        {
+            "id": "node-types",
+            "title": "Node Types",
+            "text": "Pipelines use five node types: Source nodes read data, Transform nodes filter and map, Sink nodes write output, Branch nodes split flows, and Merge nodes combine flows back together.",
+            "attachTo": { "element": "#pipeline-components", "on": "bottom" }
+        },
+        {
+            "id": "connections",
+            "title": "Connections and DAG Patterns",
+            "text": "Nodes are connected with directed edges that define data flow. The DAG structure ensures data flows in one direction with no cycles. Lesson 25.4 covers fan-out, fan-in, and parallel processing patterns.",
+            "attachTo": { "element": "#dag-directed-acyclic-graph", "on": "bottom" }
+        },
+        {
+            "id": "palette",
+            "title": "Node Palette and Configuration",
+            "text": "Each node has a configuration panel where you set topics, serializers, filter expressions, and positions. The visual editor validates your pipeline before execution to catch errors early.",
+            "attachTo": { "element": "#node-configuration", "on": "bottom" }
+        },
+        {
+            "id": "running",
+            "title": "Running and Monitoring Pipelines",
+            "text": "Once built, pipelines can be started, monitored in real time, and debugged with data flow inspection. Lesson 25.5 covers monitoring throughput, debugging data issues, and troubleshooting.",
+            "attachTo": { "element": "#best-practices", "on": "top" }
+        }
+    ]
+}

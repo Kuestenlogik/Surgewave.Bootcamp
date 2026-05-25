@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-schema-registry",
+    "title": "Schema Registry",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "overview",
+            "title": "What is a Schema Registry?",
+            "text": "A schema registry provides centralized schema management for Surgewave. It defines message structure, validates data quality, and enables safe schema evolution over time.",
+            "attachTo": { "element": "#overview", "on": "bottom" }
+        },
+        {
+            "id": "what-is-schema",
+            "title": "What is a Schema?",
+            "text": "A schema defines your data structure: field names and types, required vs optional fields, and validation rules. It acts as a contract between producers and consumers.",
+            "attachTo": { "element": "#what-is-a-schema", "on": "bottom" }
+        },
+        {
+            "id": "benefits",
+            "title": "Schema Registry Benefits",
+            "text": "Schemas provide data quality through validation, serve as shared contracts, enable safe evolution, and act as self-documenting data structures.",
+            "attachTo": { "element": "#schema-registry-benefits", "on": "bottom" }
+        },
+        {
+            "id": "compatibility",
+            "title": "Compatibility Modes",
+            "text": "Choose from backward (new reads old), forward (old reads new), full (both directions), or none (no checking) compatibility modes based on your evolution strategy.",
+            "attachTo": { "element": "#compatibility-modes", "on": "bottom" }
+        },
+        {
+            "id": "learning-objectives",
+            "title": "Hands-On Lessons",
+            "text": "Start with schema basics in 10.1, then learn JSON Schema in 10.2, versioning in 10.3, compatibility enforcement in 10.4, and practical integration in 10.5.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        }
+    ]
+}

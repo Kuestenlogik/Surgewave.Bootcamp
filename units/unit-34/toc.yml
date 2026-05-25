@@ -1,0 +1,18 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 34.1: Performance Architecture"
+      href: lesson-1/README.md
+    - name: "Lesson 34.2: Zero-Allocation Patterns"
+      href: lesson-2/README.md
+    - name: "Lesson 34.3: SIMD & Hardware Acceleration"
+      href: lesson-3/README.md
+    - name: "Lesson 34.4: Memory Pooling Strategies"
+      href: lesson-4/README.md
+    - name: "Lesson 34.5: Hot-Path Optimizations Applied"
+      href: lesson-5/README.md
+    - name: "Lesson 34.6: Performance Regression Suite"
+      href: lesson-6/README.md
+    - name: "Lesson 34.7: Benchmarking with BenchmarkDotNet"
+      href: lesson-7/README.md

@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-disaster-recovery",
+    "title": "Disaster Recovery",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "dr-architecture",
+            "title": "DR Architecture",
+            "text": "Multi-region disaster recovery uses async replication between primary and secondary regions, with tiered backup storage for daily snapshots, weekly backups, and monthly archives.",
+            "attachTo": { "element": "#disaster-recovery-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "rto-rpo",
+            "title": "RTO and RPO",
+            "text": "Recovery Time Objective (how fast you recover) and Recovery Point Objective (how much data you can lose) vary by strategy: cold standby costs less, hot standby recovers faster.",
+            "attachTo": { "element": "#recovery-time-objectives-rto-and-recovery-point-objectives-rpo", "on": "bottom" }
+        },
+        {
+            "id": "backup-tiers",
+            "title": "Backup Strategy Tiers",
+            "text": "Use three backup tiers: continuous replication for immediate failover, periodic snapshots for quick restore, and archive backups for long-term compliance retention.",
+            "attachTo": { "element": "#backup-strategy-tiers", "on": "bottom" }
+        },
+        {
+            "id": "failover",
+            "title": "Failover Procedures",
+            "text": "The failover decision tree evaluates whether the failure is complete, partial, or a network partition, then routes to automatic failover, manual evaluation, or monitoring.",
+            "attachTo": { "element": "#failover-decision-tree", "on": "bottom" }
+        },
+        {
+            "id": "dr-metrics",
+            "title": "DR Metrics",
+            "text": "Track key DR metrics: RTO under 15 minutes, RPO under 5 minutes, replication lag under 1 minute, backup success above 99.9%, and monthly failover drills.",
+            "attachTo": { "element": "#dr-metrics", "on": "bottom" }
+        }
+    ]
+}

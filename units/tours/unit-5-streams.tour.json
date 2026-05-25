@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-streams",
+    "title": "Stream Processing Overview",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "what-are-streams",
+            "title": "What Are Streams?",
+            "text": "Surgewave Streams is a stream processing library that lets you transform, aggregate, and join data in real time. It runs inside your .NET application with no external processing cluster required.",
+            "attachTo": { "element": "article h1", "on": "bottom" }
+        },
+        {
+            "id": "topology-concept",
+            "title": "Topology: Your Processing Graph",
+            "text": "A topology is a directed graph of processing nodes built with StreamsBuilder. Data flows from source topics through transformations (map, filter, groupBy) and into output topics or state stores.",
+            "attachTo": { "element": "#architecture", "on": "bottom" }
+        },
+        {
+            "id": "stream-vs-table",
+            "title": "Stream vs Table",
+            "text": "A Stream represents an unbounded sequence of records (inserts). A Table represents the latest value per key (upserts). Streams are for events; Tables are for current state like inventory or user profiles.",
+            "attachTo": { "element": "#stream-vs-table", "on": "bottom" }
+        },
+        {
+            "id": "windowing",
+            "title": "Windowing for Time-Based Aggregations",
+            "text": "Windows group records by time intervals. Tumbling windows are fixed and non-overlapping (hourly reports). Hopping windows overlap (moving averages). Session windows are gap-based (user sessions).",
+            "attachTo": { "element": "#windowing-types", "on": "bottom" }
+        },
+        {
+            "id": "state-stores",
+            "title": "State Stores",
+            "text": "State stores persist aggregation results locally. You can query them interactively for real-time lookups. Lesson 7.5 covers KeyValueStore, WindowStore, and interactive queries.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        }
+    ]
+}

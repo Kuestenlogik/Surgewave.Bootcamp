@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-observability",
+    "title": "Observability and Troubleshooting",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "overview",
+            "title": "Observability Pillars",
+            "text": "Effective observability rests on three pillars: logs for discrete events, metrics for numeric measurements over time, and traces for tracking requests across services.",
+            "attachTo": { "element": "#observability-pillars", "on": "bottom" }
+        },
+        {
+            "id": "logging",
+            "title": "Logging and Diagnostics",
+            "text": "Configure structured logging with ILogger and DiagnosticSource. Lesson 9.1 covers setting up visibility into your Surgewave application behavior.",
+            "attachTo": { "element": "#overview", "on": "bottom" }
+        },
+        {
+            "id": "metrics",
+            "title": "Metrics and Monitoring",
+            "text": "Expose counters, histograms, and meters for Prometheus-style monitoring using IMeterFactory. Lesson 9.2 covers the metrics pipeline.",
+            "attachTo": { "element": "#key-concepts", "on": "bottom" }
+        },
+        {
+            "id": "common-issues",
+            "title": "Common Issues",
+            "text": "Learn to debug consumer lag, rebalancing problems, timeouts, and memory issues. Each has distinct symptoms and requires a specific debugging approach.",
+            "attachTo": { "element": "#common-issues", "on": "bottom" }
+        },
+        {
+            "id": "profiling",
+            "title": "Performance Profiling",
+            "text": "Profile memory allocations and identify bottlenecks in your Surgewave applications. Lesson 9.5 covers profiling tools and techniques.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        }
+    ]
+}

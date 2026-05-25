@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-real-world",
+    "title": "Real-World Patterns Capstone",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "overview",
+            "title": "Capstone Overview",
+            "text": "This capstone unit combines everything from the bootcamp into complete, production-ready patterns across five real-world scenarios.",
+            "attachTo": { "element": "#overview", "on": "bottom" }
+        },
+        {
+            "id": "pattern-integration",
+            "title": "Pattern Integration",
+            "text": "Each lesson combines multiple Surgewave concepts: messaging with streams for e-commerce, aggregation for IoT, integration with streams for log analytics, and more.",
+            "attachTo": { "element": "#pattern-integration", "on": "bottom" }
+        },
+        {
+            "id": "architecture-principles",
+            "title": "Architecture Principles",
+            "text": "Apply event-driven design, loose coupling via topics, event sourcing as source of truth, CQRS for separate read/write models, and the saga pattern for distributed transactions.",
+            "attachTo": { "element": "#architecture-principles", "on": "bottom" }
+        },
+        {
+            "id": "learning-objectives",
+            "title": "What You Will Build",
+            "text": "Build an e-commerce pipeline, IoT data platform, centralized log analytics, event sourcing with projections, and microservices communication with sagas.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        },
+        {
+            "id": "tips",
+            "title": "Tips for Success",
+            "text": "Start simple and build incrementally, run and experiment with examples, think in events not data, consider failure modes, and design for horizontal scaling.",
+            "attachTo": { "element": "#tips-for-success", "on": "bottom" }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 12.1: Log vs Queue — Two Worlds, One System"
+      href: lesson-1/README.md
+    - name: "Lesson 12.2: Configuring QueueView"
+      href: lesson-2/README.md
+    - name: "Lesson 12.3: AMQP Protocol Adapter"
+      href: lesson-3/README.md
+    - name: "Lesson 12.4: Visibility Timeout & Delivery Guarantees"
+      href: lesson-4/README.md
+    - name: "Lesson 12.5: Priority Lanes"
+      href: lesson-5/README.md
+    - name: "Lesson 12.6: Migrating from RabbitMQ"
+      href: lesson-6/README.md

@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Message Size Limits"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Compression"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Chunking"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Claim-Check Pattern"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Streaming Large Data"
+      href: lesson-5/README.md

@@ -1,0 +1,72 @@
+# Unit 14 Project: Kubernetes Services
+# Define network access for Surgewave components
+
+# TODO: Create headless service for Surgewave broker StatefulSet
+# Headless services (clusterIP: None) enable DNS-based discovery
+# for StatefulSet pods: surgewave-broker-0.surgewave-broker, surgewave-broker-1.surgewave-broker, etc.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: surgewave-broker
+  labels:
+    app: surgewave
+    component: broker
+spec:
+  # TODO: Set clusterIP to None for headless service
+  # clusterIP: None
+
+  ports:
+    - name: client
+      port: 9092
+      targetPort: 9092
+    # TODO: Add inter-broker port
+    # - name: inter-broker
+    #   port: 9093
+    #   targetPort: 9093
+
+  selector:
+    app: surgewave
+    component: broker
+
+---
+# TODO: Create ClusterIP service for notification service
+# This allows other services to reach the notification API
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: notification-svc
+  labels:
+    app: surgewave
+    component: notification
+spec:
+  type: ClusterIP
+
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+    # TODO: Add metrics port if needed
+    # - name: metrics
+    #   port: 9090
+    #   targetPort: 9090
+
+  selector:
+    app: surgewave
+    component: notification
+
+---
+# TODO: (Optional) Create LoadBalancer or Ingress for external access
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: notification-external
+# spec:
+#   type: LoadBalancer
+#   ports:
+#     - port: 80
+#       targetPort: 8080
+#   selector:
+#     app: surgewave
+#     component: notification

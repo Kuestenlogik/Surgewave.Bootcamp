@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-cloud-k8s",
+    "title": "Cloud and Kubernetes Deployment",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "deployment-architecture",
+            "title": "Deployment Architecture",
+            "text": "Deploy Surgewave from local Docker Compose environments through staging Kubernetes clusters to production multi-region setups with TLS and high availability.",
+            "attachTo": { "element": "#deployment-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "docker",
+            "title": "Docker Multi-Stage Builds",
+            "text": "Containerize Surgewave apps with multi-stage Dockerfiles that produce minimal runtime images. Lesson 14.1 covers Dockerfile best practices.",
+            "attachTo": { "element": "#docker-multi-stage-build", "on": "bottom" }
+        },
+        {
+            "id": "kubernetes",
+            "title": "Kubernetes Resources",
+            "text": "Use Deployments for stateless producers and consumers, StatefulSets for brokers, Services for discovery, ConfigMaps for settings, and Secrets for credentials.",
+            "attachTo": { "element": "#kubernetes-resources-overview", "on": "bottom" }
+        },
+        {
+            "id": "configuration",
+            "title": "Environment Configuration",
+            "text": "Surgewave supports layered configuration: command-line arguments, environment variables, ConfigMaps, appsettings.json, and code defaults, in priority order.",
+            "attachTo": { "element": "#environment-configuration-pattern", "on": "bottom" }
+        },
+        {
+            "id": "cloud-providers",
+            "title": "Cloud Providers",
+            "text": "Understand considerations for AWS (EKS, MSK), Azure (AKS, Event Hubs), and GCP (GKE, Pub/Sub) when deploying Surgewave to cloud environments.",
+            "attachTo": { "element": "#cloud-provider-considerations", "on": "bottom" }
+        }
+    ]
+}

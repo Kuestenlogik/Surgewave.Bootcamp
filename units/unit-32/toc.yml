@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Hybrid Cloud Concepts"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Multi-Region Deployment"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Cross-Cloud Replication"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Geo-Routing and Latency Optimization"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Hybrid On-Premise and Cloud"
+      href: lesson-5/README.md

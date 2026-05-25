@@ -1,0 +1,42 @@
+# Unit 14 Project: Kubernetes ConfigMap
+# Configure Surgewave application settings
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: surgewave-config
+  labels:
+    app: surgewave
+    component: config
+data:
+  # TODO: Add Surgewave bootstrap servers configuration
+  # Surgewave_BOOTSTRAP_SERVERS: "surgewave-broker:9092"
+
+  # TODO: Add topic configuration
+  # Surgewave_TOPICS: "notifications-email,notifications-sms,notifications-push"
+
+  # TODO: Add partitions configuration
+  # Surgewave_PARTITIONS: "3"
+
+  # TODO: Add replication factor
+  # Surgewave_REPLICATION_FACTOR: "3"
+
+  # TODO: Add consumer group ID
+  # Surgewave_CONSUMER_GROUP: "notification-service"
+
+  # TODO: Add log level
+  # LOG_LEVEL: "Information"
+
+  # TODO: Add API port
+  # API_PORT: "8080"
+
+---
+# TODO: Create a separate ConfigMap for broker configuration
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: surgewave-broker-config
+# data:
+#   Surgewave_BROKER_ID: "auto"
+#   Surgewave_DATA_DIR: "/var/surgewave/data"
+#   Surgewave_LOG_DIR: "/var/surgewave/logs"

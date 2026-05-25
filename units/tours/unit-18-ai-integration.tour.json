@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-ai-integration",
+    "title": "AI/LLM Integration Tour",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-ai",
+            "title": "Why AI + Surgewave?",
+            "text": "Traditional search matches exact keywords. AI-enhanced processing understands semantic meaning, so a query for 'car problems' also finds documents about 'automobile issues' and 'vehicle trouble'.",
+            "attachTo": { "element": "#why-ai-integration-matters", "on": "bottom" }
+        },
+        {
+            "id": "embeddings",
+            "title": "Embeddings: Text as Vectors",
+            "text": "Embeddings convert text into dense vectors of floating-point numbers that capture semantic meaning. Similar texts produce similar vectors. Surgewave supports OpenAI and local Ollama models for generating embeddings.",
+            "attachTo": { "element": "#embeddings", "on": "bottom" }
+        },
+        {
+            "id": "rag-pipeline",
+            "title": "RAG Pipeline Architecture",
+            "text": "RAG (Retrieval-Augmented Generation) combines vector search with LLM generation. First embed the query, then find similar documents in a vector database, then let the LLM generate an answer using those documents as context.",
+            "attachTo": { "element": "#rag-retrieval-augmented-generation", "on": "bottom" }
+        },
+        {
+            "id": "vector-search",
+            "title": "Vector Databases",
+            "text": "Qdrant stores embeddings and supports similarity search using cosine distance. Lesson 22.3 teaches you to store vectors and query them for nearest-neighbor results, which is the foundation of semantic search.",
+            "attachTo": { "element": "#vector-similarity", "on": "bottom" }
+        },
+        {
+            "id": "hands-on",
+            "title": "Get Started",
+            "text": "Begin with Lesson 22.1 to generate your first embeddings with OpenAI, then progress through vector storage, RAG pipelines, and semantic search. Each lesson includes runnable code and exercises.",
+            "attachTo": { "element": "article table", "on": "bottom" }
+        }
+    ]
+}

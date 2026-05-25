@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-pipeline-building",
+    "title": "Pipeline Building Tour",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "pipeline-anatomy",
+            "title": "Pipeline Anatomy",
+            "text": "Every pipeline has a PipelineDefinition containing nodes, connections, metadata, and a status lifecycle (Draft, Running, Stopped, Error). Understanding this model is key to building effective pipelines.",
+            "attachTo": { "element": "article h1", "on": "bottom" }
+        },
+        {
+            "id": "node-types",
+            "title": "Node Types and Categories",
+            "text": "Surgewave pipelines support 6 node categories: Source nodes (Generator, Topic, File), Sink nodes (Stdio, Topic, Database), Transform nodes (SQL, Filter, Map), AI/ML nodes (Embedding, LLM, RAG), Streams nodes, and Workflow nodes.",
+            "attachTo": { "element": "article table", "on": "bottom" }
+        },
+        {
+            "id": "workflow-nodes",
+            "title": "Workflow Patterns",
+            "text": "Workflow nodes enable advanced patterns: human-in-the-loop approval gates, batch processing with configurable windows, conditional routing based on content, retry loops for transient failures, and stateful processing.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        },
+        {
+            "id": "rag-pipeline",
+            "title": "Building a RAG Pipeline",
+            "text": "Lesson 34.4 walks you through building a RAG chatbot pipeline with 7 nodes: Topic Source, Document Chunker, Embedding Generator, Vector Store, Retriever, LLM Prompt Builder, and Chat Endpoint.",
+            "attachTo": { "element": "#lessons", "on": "bottom" }
+        },
+        {
+            "id": "chat-api",
+            "title": "Pipeline Chat API",
+            "text": "Lesson 34.7 covers the Pipeline Chat API for real-time conversational AI. Chat-enabled pipelines support session management, SSE streaming for token-by-token delivery, and a ChatDrawer UI component.",
+            "attachTo": { "element": "#lessons", "on": "top" }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-fundamentals",
+    "title": "First Steps with Surgewave",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "producer-concept",
+            "title": "Producing Messages",
+            "text": "A producer sends messages to topics. Each message has a key, a value, optional headers, and a timestamp. Producers are your entry point for getting data into Surgewave.",
+            "attachTo": { "element": "#messages", "on": "bottom" }
+        },
+        {
+            "id": "producer-code",
+            "title": "Code Example: Producer",
+            "text": "Lesson 1.1 walks you through creating your first producer. You will learn to send messages with keys for routing and values containing your data payload.",
+            "attachTo": { "element": "article table", "on": "bottom" }
+        },
+        {
+            "id": "consumer-concept",
+            "title": "Consuming Messages",
+            "text": "Consumers read messages from topics. They track their position using offsets, so they can resume where they left off after a restart. Lesson 1.2 covers the consumer API.",
+            "attachTo": { "element": "#topics", "on": "bottom" }
+        },
+        {
+            "id": "partitioning",
+            "title": "Partitions Enable Parallelism",
+            "text": "Topics are divided into partitions for horizontal scaling. Each partition is an ordered, append-only log. Messages with the same key always land in the same partition, guaranteeing per-key ordering.",
+            "attachTo": { "element": "#partitions", "on": "bottom" }
+        },
+        {
+            "id": "exercise-hint",
+            "title": "Hands-On Exercises",
+            "text": "Start with Lesson 1.1 to produce your first messages, then move through consumers, partitions, and consumer groups. Each lesson includes runnable code you can experiment with.",
+            "attachTo": { "element": "#getting-started", "on": "top" }
+        }
+    ]
+}

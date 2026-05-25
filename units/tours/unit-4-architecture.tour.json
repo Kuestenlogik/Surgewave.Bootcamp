@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-architecture",
+    "title": "Architecture and Design",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "topic-design",
+            "title": "Topic Design Principles",
+            "text": "Good topic granularity follows domain boundaries. Avoid topics that are too coarse (mixed types) or too fine (per-entity). Group by domain aggregate for the right balance.",
+            "attachTo": { "element": "#topic-design-principles", "on": "bottom" }
+        },
+        {
+            "id": "partitioning",
+            "title": "Partitioning Trade-offs",
+            "text": "Choose partition keys based on your ordering and scalability needs. Entity IDs give per-entity ordering, while random keys maximize throughput at the cost of ordering.",
+            "attachTo": { "element": "#partitioning-trade-offs", "on": "bottom" }
+        },
+        {
+            "id": "schema-evolution",
+            "title": "Schema Evolution",
+            "text": "Plan for schema changes from the start. Use backward compatibility (new consumers read old data) and forward compatibility (old consumers read new data) strategies.",
+            "attachTo": { "element": "#schema-evolution", "on": "bottom" }
+        },
+        {
+            "id": "event-patterns",
+            "title": "Event-Driven Patterns",
+            "text": "Apply CQRS to separate read and write models through Surgewave topics. Use Event Sourcing to make the event log the source of truth, with projections for query-optimized views.",
+            "attachTo": { "element": "#event-driven-patterns", "on": "bottom" }
+        },
+        {
+            "id": "decision-framework",
+            "title": "Decision Framework",
+            "text": "When designing your architecture, ask five key questions: domain boundaries, ordering guarantees, schema evolution, read patterns, and expected scale.",
+            "attachTo": { "element": "#decision-framework", "on": "bottom" }
+        }
+    ]
+}

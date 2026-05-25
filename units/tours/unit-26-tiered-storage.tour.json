@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-tiered-storage",
+    "title": "Tiered Storage",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-tiered",
+            "title": "Why Tiered Storage Matters",
+            "text": "Tiered storage optimizes cost by moving data between hot (memory/NVMe), warm (local SSD), and cold (object store) tiers based on age and access patterns, saving up to 80%.",
+            "attachTo": { "element": "#why-tiered-storage-matters", "on": "bottom" }
+        },
+        {
+            "id": "architecture",
+            "title": "Tiered Storage Architecture",
+            "text": "Messages flow from hot tier (in-memory buffer) to warm tier (compressed local segments) to cold tier (S3/Azure archive), with configurable retention thresholds at each level.",
+            "attachTo": { "element": "#tiered-storage-architecture", "on": "bottom" }
+        },
+        {
+            "id": "cost",
+            "title": "Cost Optimization",
+            "text": "With 1 TB per day and 90-day retention, tiered storage reduces costs from $2,700/month to $540/month. For 7-year compliance data, savings reach $336,000.",
+            "attachTo": { "element": "#cost-optimization-examples", "on": "bottom" }
+        },
+        {
+            "id": "configuration",
+            "title": "Configuration",
+            "text": "Configure tiered storage in code with WithStorageMode(Tiered), set hot and warm retention thresholds, and specify cold tier storage like S3 or Azure Blob.",
+            "attachTo": { "element": "#key-configuration-options", "on": "bottom" }
+        },
+        {
+            "id": "best-practices",
+            "title": "Best Practices",
+            "text": "Start with warm tier only, monitor access patterns to tune transitions, test retrieval times against SLAs, use compression, and set up automated lifecycle rules.",
+            "attachTo": { "element": "#best-practices", "on": "bottom" }
+        }
+    ]
+}

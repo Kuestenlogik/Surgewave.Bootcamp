@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-hybrid-cloud",
+    "title": "Hybrid Cloud Deployments",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-hybrid",
+            "title": "Why Hybrid Cloud Matters",
+            "text": "Hybrid cloud provides high availability across provider outages, optimal latency via nearest-region routing, data sovereignty compliance, and cost optimization through multi-provider strategies.",
+            "attachTo": { "element": "#why-hybrid-cloud-matters", "on": "bottom" }
+        },
+        {
+            "id": "architecture",
+            "title": "Multi-Cloud Architecture",
+            "text": "Deploy Surgewave clusters across AWS, Azure, and GCP with cross-cloud replication. On-premise data centers connect through secure gateways and cloud sync agents.",
+            "attachTo": { "element": "#hybrid-cloud-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "topologies",
+            "title": "Replication Topologies",
+            "text": "Choose from active-passive for DR, active-active for global distribution, hub-spoke for central aggregation, or mesh for full redundancy based on your availability needs.",
+            "attachTo": { "element": "#replication-topologies", "on": "bottom" }
+        },
+        {
+            "id": "key-patterns",
+            "title": "Key Patterns",
+            "text": "Implement regional producer affinity for nearest-cluster writes, cross-region replication for data availability, and geo-aware consumer routing for local replica reads.",
+            "attachTo": { "element": "#key-patterns", "on": "bottom" }
+        },
+        {
+            "id": "best-practices",
+            "title": "Best Practices",
+            "text": "Use async replication to avoid critical-path latency, implement conflict resolution for active-active, monitor replication lag, test failover monthly, and encrypt cross-cloud traffic.",
+            "attachTo": { "element": "#best-practices", "on": "bottom" }
+        }
+    ]
+}

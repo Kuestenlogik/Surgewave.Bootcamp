@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-chaos-testing",
+    "title": "Chaos Testing Tour",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "what-is-chaos",
+            "title": "What Is Chaos Engineering?",
+            "text": "Chaos engineering proactively injects failures in controlled environments to build confidence in system resilience. Instead of waiting for production outages, you test failure modes before they happen.",
+            "attachTo": { "element": "#why-chaos-engineering", "on": "bottom" }
+        },
+        {
+            "id": "chaos-engine",
+            "title": "The ChaosEngine",
+            "text": "ChaosEngine is the central orchestrator for fault injection. It manages fault activation/deactivation, scope targeting (per broker, topic, or peer), probability-based triggering, and a timeline of all events.",
+            "attachTo": { "element": "#lesson-312-the-chaosengine", "on": "bottom" }
+        },
+        {
+            "id": "fault-types",
+            "title": "9 Fault Types",
+            "text": "Surgewave supports 9 injectable faults across storage and transport layers: NetworkPartition, NodeCrash, DiskIoError, SlowNetwork, MessageCorruption, LeaderElectionDisruption, StorageFullError, ConnectionReset, and PartialWrite.",
+            "attachTo": { "element": "#the-9-fault-types", "on": "bottom" }
+        },
+        {
+            "id": "scenarios",
+            "title": "Scenario Helpers",
+            "text": "High-level scenario classes compose multiple faults into realistic failure patterns. NetworkPartitionScenario isolates brokers, BrokerCrashScenario simulates crashes, and LatencyInjectionScenario adds configurable delays.",
+            "attachTo": { "element": "#lesson-315-scenario-helpers", "on": "bottom" }
+        },
+        {
+            "id": "chaos-cluster",
+            "title": "ChaosCluster for Integration Tests",
+            "text": "ChaosCluster provides a multi-broker test environment with per-broker fault injection. Use convenience methods like PartitionBroker, CrashBroker, and InjectLatency to write resilience integration tests.",
+            "attachTo": { "element": "#lesson-316-chaoscluster-for-integration-tests", "on": "bottom" }
+        }
+    ]
+}

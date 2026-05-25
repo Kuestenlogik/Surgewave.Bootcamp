@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: What is Surgewave?"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Project Setup"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Hello Surgewave"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Contributing to Surgewave"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Getting Support"
+      href: lesson-5/README.md

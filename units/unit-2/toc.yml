@@ -1,0 +1,16 @@
+- name: Overview
+  href: README.md
+- name: "Lesson 2.1: Dashboard & Navigation"
+  href: lesson-1/README.md
+- name: "Lesson 2.2: Topic & Message Management"
+  href: lesson-2/README.md
+- name: "Lesson 2.3: Consumer Groups & Lag Monitoring"
+  href: lesson-3/README.md
+- name: "Lesson 2.4: Pipeline Management"
+  href: lesson-4/README.md
+- name: "Lesson 2.5: Monitoring & Alerting"
+  href: lesson-5/README.md
+- name: "Lesson 2.6: Security & Governance"
+  href: lesson-6/README.md
+- name: "Lesson 2.7: Intent-Based Configuration"
+  href: lesson-7/README.md

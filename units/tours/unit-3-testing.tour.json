@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-testing",
+    "title": "Testing Surgewave Applications",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "learning-objectives",
+            "title": "What You Will Learn",
+            "text": "This unit covers the full testing pyramid for Surgewave: unit tests with embedded broker, mocking for isolation, integration tests with fixtures, Testcontainers, and benchmarking with BenchmarkDotNet.",
+            "attachTo": { "element": "#learning-objectives", "on": "bottom" }
+        },
+        {
+            "id": "embedded-broker",
+            "title": "Embedded Broker Testing",
+            "text": "The fastest way to test Surgewave is with an embedded broker running in-memory. Lesson 2.1 shows you how to spin up a broker per test with zero external dependencies.",
+            "attachTo": { "element": "#embedded-broker-testing", "on": "bottom" }
+        },
+        {
+            "id": "mocking",
+            "title": "Mocking for Unit Tests",
+            "text": "For pure unit tests without any broker, mock Surgewave interfaces like IProducer and IConsumer. This keeps tests fast and focused on your business logic.",
+            "attachTo": { "element": "#mocking-for-unit-tests", "on": "bottom" }
+        },
+        {
+            "id": "integration-fixtures",
+            "title": "Integration Test Fixtures",
+            "text": "Share broker instances across tests using xUnit fixtures for efficient integration testing. Lesson 2.3 covers the IAsyncLifetime pattern.",
+            "attachTo": { "element": "#integration-test-fixtures", "on": "bottom" }
+        },
+        {
+            "id": "benchmarking",
+            "title": "Benchmarking with BenchmarkDotNet",
+            "text": "Measure your Surgewave application performance with BenchmarkDotNet. Lesson 2.5 teaches you to write benchmarks and interpret throughput and allocation results.",
+            "attachTo": { "element": "#benchmarking", "on": "bottom" }
+        }
+    ]
+}

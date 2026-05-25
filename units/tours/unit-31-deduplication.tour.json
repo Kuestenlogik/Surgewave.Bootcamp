@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-deduplication",
+    "title": "Message Deduplication",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-duplicates",
+            "title": "Why Duplicates Occur",
+            "text": "Message duplicates arise from producer retries, consumer crashes before offset commit, consumer group rebalances, network partitions, and transaction rollbacks.",
+            "attachTo": { "element": "#why-duplicates-occur", "on": "bottom" }
+        },
+        {
+            "id": "delivery-semantics",
+            "title": "Delivery Semantics",
+            "text": "At-most-once risks data loss. At-least-once (the default) may produce duplicates. Exactly-once uses transactional processing for zero loss and zero duplicates.",
+            "attachTo": { "element": "#why-deduplication-matters", "on": "bottom" }
+        },
+        {
+            "id": "dedup-architecture",
+            "title": "Deduplication Pipeline",
+            "text": "Layer deduplication with Bloom filters for fast pre-filtering, LRU caches for accurate bounded-memory checks, and optional database lookups for confirmed duplicates.",
+            "attachTo": { "element": "#deduplication-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "idempotent-ops",
+            "title": "Idempotent Operations",
+            "text": "Design operations that are safe to repeat. Use database upserts instead of increments, and include idempotency keys in every message for duplicate detection.",
+            "attachTo": { "element": "#key-patterns", "on": "bottom" }
+        },
+        {
+            "id": "strategies",
+            "title": "Strategy Comparison",
+            "text": "Choose from HashSet (fast, unbounded), LRU cache (bounded memory), Bloom filter (very low memory), time-based (short windows), or database-backed (durable) deduplication.",
+            "attachTo": { "element": "#deduplication-strategies-comparison", "on": "bottom" }
+        }
+    ]
+}

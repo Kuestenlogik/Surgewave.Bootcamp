@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-advanced-messaging",
+    "title": "Advanced Messaging Patterns",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "serialization",
+            "title": "Custom Serialization",
+            "text": "Learn to implement JSON, Protobuf, and custom serializers to convert complex objects for transmission over Surgewave topics.",
+            "attachTo": { "element": "#serialization", "on": "bottom" }
+        },
+        {
+            "id": "message-headers",
+            "title": "Headers and Metadata",
+            "text": "Attach metadata to messages without affecting the payload. Use correlation IDs for request tracking and trace context for distributed tracing.",
+            "attachTo": { "element": "#message-headers", "on": "bottom" }
+        },
+        {
+            "id": "error-handling",
+            "title": "Error Handling Patterns",
+            "text": "Handle failures gracefully with retry policies, dead letter queues for unprocessable messages, and circuit breakers to prevent cascading failures.",
+            "attachTo": { "element": "#error-handling-patterns", "on": "bottom" }
+        },
+        {
+            "id": "transactions",
+            "title": "Transactions and Exactly-Once",
+            "text": "Ensure atomicity across multiple operations with transactions. Produce to multiple topics atomically and implement exactly-once processing guarantees.",
+            "attachTo": { "element": "#transactions", "on": "bottom" }
+        },
+        {
+            "id": "compacted-topics",
+            "title": "Compacted and Ephemeral Topics",
+            "text": "Use log compaction for changelog and config topics that keep only the latest value per key. Use ephemeral topics for real-time event distribution without persistence.",
+            "attachTo": { "element": "#log-compaction", "on": "bottom" }
+        }
+    ]
+}

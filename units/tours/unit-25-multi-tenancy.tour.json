@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-multi-tenancy",
+    "title": "Multi-Tenancy",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "architecture",
+            "title": "Multi-Tenant Architecture",
+            "text": "Multiple tenants share the same Surgewave cluster through a gateway layer that handles authentication, authorization, and rate limiting, with topic namespaces providing logical isolation.",
+            "attachTo": { "element": "#multi-tenancy-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "isolation-levels",
+            "title": "Isolation Levels",
+            "text": "Choose from shared everything (low cost, no isolation), namespace isolation (balanced cost and logical separation), or dedicated clusters (high cost, full physical isolation).",
+            "attachTo": { "element": "#isolation-levels", "on": "bottom" }
+        },
+        {
+            "id": "key-patterns",
+            "title": "Tenant-Aware Patterns",
+            "text": "Use TenantContext to prefix topic names and consumer group IDs automatically. Tenant-aware producers route messages to the correct namespaced topics.",
+            "attachTo": { "element": "#key-patterns", "on": "bottom" }
+        },
+        {
+            "id": "resource-management",
+            "title": "Resource Management",
+            "text": "Allocate resources per tenant with topic namespace prefixes, partition limits, throughput rate limiting, storage quotas, and connection limits.",
+            "attachTo": { "element": "#resource-management-strategy", "on": "bottom" }
+        },
+        {
+            "id": "monitoring",
+            "title": "Monitoring per Tenant",
+            "text": "Track per-tenant metrics including messages per second, bytes per second, partition counts, and quota utilization to ensure fair resource allocation.",
+            "attachTo": { "element": "#monitoring-considerations", "on": "bottom" }
+        }
+    ]
+}

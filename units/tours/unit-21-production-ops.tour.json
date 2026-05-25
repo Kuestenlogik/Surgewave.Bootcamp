@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-production-ops",
+    "title": "Production Operations",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "clustering",
+            "title": "Multi-Broker Clustering",
+            "text": "Surgewave clusters consist of multiple brokers for high availability, scalability, and data locality. Lesson 4.1 covers multi-broker setup and leader election.",
+            "attachTo": { "element": "#clustering", "on": "bottom" }
+        },
+        {
+            "id": "replication",
+            "title": "Data Replication",
+            "text": "Topics can be replicated across brokers using replication factors, in-sync replicas (ISR), and minimum ISR settings for write durability.",
+            "attachTo": { "element": "#replication", "on": "bottom" }
+        },
+        {
+            "id": "monitoring",
+            "title": "Monitoring Stack",
+            "text": "Monitor Surgewave with Prometheus metrics scraped into Grafana dashboards. Lesson 4.3 walks through setting up the complete observability pipeline.",
+            "attachTo": { "element": "#monitoring-stack", "on": "bottom" }
+        },
+        {
+            "id": "security",
+            "title": "Security Layers",
+            "text": "Secure your cluster with TLS for transport encryption, SASL for client authentication, and ACLs for fine-grained resource authorization.",
+            "attachTo": { "element": "#security-layers", "on": "bottom" }
+        },
+        {
+            "id": "architecture",
+            "title": "Architecture Overview",
+            "text": "Understand how producers, consumers, and brokers work together in a replicated cluster with leader and follower partitions.",
+            "attachTo": { "element": "#architecture-overview", "on": "bottom" }
+        }
+    ]
+}

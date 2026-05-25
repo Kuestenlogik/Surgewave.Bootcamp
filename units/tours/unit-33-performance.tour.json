@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-performance",
+    "title": "Performance and Tuning",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-performance",
+            "title": "Why Performance Matters",
+            "text": "Surgewave targets 1M+ messages per second per broker with sub-millisecond P50 latency and a GC-free hot path. Understanding throughput, latency, and memory efficiency is key.",
+            "attachTo": { "element": "#why-performance-matters", "on": "bottom" }
+        },
+        {
+            "id": "optimization-flow",
+            "title": "Optimization Pipeline",
+            "text": "Follow a four-step cycle: measure baseline performance, profile to find hotspots, apply targeted optimizations, then validate improvements with re-benchmarking.",
+            "attachTo": { "element": "#performance-optimization-flow", "on": "bottom" }
+        },
+        {
+            "id": "settings",
+            "title": "Key Performance Settings",
+            "text": "Tune BatchSize for throughput, LingerMs for latency vs throughput trade-off, CompressionType for CPU vs network, and Acks for durability vs speed.",
+            "attachTo": { "element": "#key-performance-settings", "on": "bottom" }
+        },
+        {
+            "id": "comparison",
+            "title": "Surgewave vs Kafka Performance",
+            "text": "Surgewave achieves 10x throughput improvement, 2-5x better P50 latency, 100% reduction in per-message memory, and 10-50x fewer GC pauses compared to Kafka.",
+            "attachTo": { "element": "#performance-comparison", "on": "bottom" }
+        },
+        {
+            "id": "best-practices",
+            "title": "Best Practices",
+            "text": "Always measure before optimizing. Batch operations, pool buffers, use Span<T> to avoid copies, never block on async, size partitions for parallelism, and monitor P99 in production.",
+            "attachTo": { "element": "#best-practices", "on": "bottom" }
+        }
+    ]
+}

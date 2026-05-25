@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Docker Basics"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Docker Compose"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Kubernetes Fundamentals"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Helm Charts"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Cloud Providers"
+      href: lesson-5/README.md

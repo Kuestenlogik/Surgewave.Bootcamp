@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-wire-protocol",
+    "title": "Wire Protocol Internals",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "protocol-frame",
+            "title": "Protocol Frame Structure",
+            "text": "The Kafka protocol uses a binary frame with size, API key, API version, correlation ID, and client ID fields, followed by the request or response body.",
+            "attachTo": { "element": "#protocol-architecture", "on": "bottom" }
+        },
+        {
+            "id": "api-keys",
+            "title": "API Keys",
+            "text": "Over 75 API keys define operations like Produce (0), Fetch (1), ListOffsets (2), and Metadata (3). Each key identifies a specific broker operation.",
+            "attachTo": { "element": "#api-keys-overview", "on": "bottom" }
+        },
+        {
+            "id": "request-response",
+            "title": "Request and Response Structure",
+            "text": "Requests include API key, version, and correlation ID for matching responses. VarInt encoding provides efficient integer serialization for compact wire format.",
+            "attachTo": { "element": "#key-concepts", "on": "bottom" }
+        },
+        {
+            "id": "surgewave-native",
+            "title": "Surgewave Native Protocol",
+            "text": "Surgewave also supports a high-performance native protocol with approximately 45 microsecond P50 latency, compared to roughly 15 milliseconds for the Kafka protocol.",
+            "attachTo": { "element": "#surgewave-native-protocol", "on": "bottom" }
+        },
+        {
+            "id": "lessons",
+            "title": "Hands-On Lessons",
+            "text": "Build a minimal custom client from scratch, debug protocol issues with hex dumps and Wireshark, and compare Surgewave native vs Kafka protocol performance.",
+            "attachTo": { "element": "#lessons", "on": "bottom" }
+        }
+    ]
+}

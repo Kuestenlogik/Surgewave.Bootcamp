@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-control-ui",
+    "title": "Surgewave Control UI Tour",
+    "triggerMode": "auto-first-visit",
+    "steps": [
+        {
+            "id": "dashboard-overview",
+            "title": "Dashboard Overview",
+            "text": "The Surgewave Control dashboard at localhost:5050 is your central hub. It displays 14 configurable widgets showing cluster health, throughput, latency percentiles, and more in real time.",
+            "attachTo": { "element": "article h1", "on": "bottom" }
+        },
+        {
+            "id": "widgets",
+            "title": "Customizable Widgets",
+            "text": "Widgets can be shown, hidden, and rearranged by dragging. Your layout and theme preferences persist in localStorage across browser sessions. The settings gear icon controls widget visibility.",
+            "attachTo": { "element": "#dashboard-widgets", "on": "bottom" }
+        },
+        {
+            "id": "topic-management",
+            "title": "Topic Management",
+            "text": "The Topics section provides full CRUD operations, a message browser for inspecting data at specific offsets, and a built-in producer for sending test messages. Bulk operations let you manage multiple topics at once.",
+            "attachTo": { "element": "#lesson-282-topic--message-management", "on": "bottom" }
+        },
+        {
+            "id": "consumer-groups",
+            "title": "Consumer Groups and Lag",
+            "text": "Monitor consumer group state, member assignments, and per-partition lag with live charts. The UI supports offset resets to earliest, latest, specific offset, or timestamp for reprocessing scenarios.",
+            "attachTo": { "element": "#lesson-283-consumer-groups--lag-monitoring", "on": "bottom" }
+        },
+        {
+            "id": "monitoring",
+            "title": "Monitoring and Alerting",
+            "text": "The Monitoring section includes metrics dashboards, 7 alert rule types (lag, throughput, latency, broker down, disk, errors, pipeline failure), notification channels, and a performance advisor.",
+            "attachTo": { "element": "#lesson-285-monitoring--alerting", "on": "bottom" }
+        }
+    ]
+}

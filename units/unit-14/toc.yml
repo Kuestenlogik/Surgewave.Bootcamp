@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 1: Protocol Basics"
+      href: lesson-1/README.md
+    - name: "Lesson 2: Message Format"
+      href: lesson-2/README.md
+    - name: "Lesson 3: Building a Minimal Client"
+      href: lesson-3/README.md
+    - name: "Lesson 4: Protocol Debugging"
+      href: lesson-4/README.md
+    - name: "Lesson 5: Protocol Extensions"
+      href: lesson-5/README.md

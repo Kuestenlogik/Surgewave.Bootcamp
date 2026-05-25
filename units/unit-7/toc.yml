@@ -1,0 +1,14 @@
+- name: Overview
+  href: README.md
+- name: "Lesson 7.1: Processor Lifecycle Hooks"
+  href: lesson-1/README.md
+- name: "Lesson 7.2: Per-Processor Metrics"
+  href: lesson-2/README.md
+- name: "Lesson 7.3: Backpressure & Flow Control"
+  href: lesson-3/README.md
+- name: "Lesson 7.4: Foreign Key Table-Table Joins"
+  href: lesson-4/README.md
+- name: "Lesson 7.5: Retry & Backoff Integration"
+  href: lesson-5/README.md
+- name: "Lesson 7.6: Interactive Query Service (IQS)"
+  href: lesson-6/README.md

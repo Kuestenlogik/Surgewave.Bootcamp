@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-aspnet",
+    "title": "ASP.NET Core Integration",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "hosted-services",
+            "title": "Hosted Services",
+            "text": "Run Surgewave consumers as background services using IHostedService and BackgroundService. Lesson 13.1 covers the StartAsync, ExecuteAsync, and StopAsync lifecycle.",
+            "attachTo": { "element": "#hosted-services-lifecycle", "on": "bottom" }
+        },
+        {
+            "id": "dependency-injection",
+            "title": "Dependency Injection",
+            "text": "Register Surgewave clients with the DI container. Use singleton lifetime for long-lived producers and consumers, and scoped lifetime for request-specific message handlers.",
+            "attachTo": { "element": "#dependency-injection-lifetimes", "on": "bottom" }
+        },
+        {
+            "id": "health-checks",
+            "title": "Health Checks",
+            "text": "Implement IHealthCheck for broker connectivity, consumer lag monitoring, and producer health. Health states progress from Healthy to Degraded to Unhealthy.",
+            "attachTo": { "element": "#health-check-states", "on": "bottom" }
+        },
+        {
+            "id": "endpoints",
+            "title": "Minimal API Endpoints",
+            "text": "Create Minimal API endpoints for producing messages and add correlation middleware for request tracking across your event-driven system.",
+            "attachTo": { "element": "#key-concepts", "on": "bottom" }
+        },
+        {
+            "id": "architecture",
+            "title": "Architecture Overview",
+            "text": "See how the HTTP pipeline, background services, DI container, and health checks integrate with the Surgewave broker in a complete ASP.NET Core application.",
+            "attachTo": { "element": "#architecture-overview", "on": "bottom" }
+        }
+    ]
+}

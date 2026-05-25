@@ -1,0 +1,20 @@
+- name: Overview
+  href: README.md
+- name: Lessons
+  items:
+    - name: "Lesson 35.1: Introduction to Chaos Engineering"
+      href: lesson-1/README.md
+    - name: "Lesson 35.2: The ChaosEngine"
+      href: lesson-2/README.md
+    - name: "Lesson 35.3: Storage Fault Injection"
+      href: lesson-3/README.md
+    - name: "Lesson 35.4: Transport Fault Injection"
+      href: lesson-4/README.md
+    - name: "Lesson 35.5: Scenario Helpers"
+      href: lesson-5/README.md
+    - name: "Lesson 35.6: ChaosCluster for Integration Tests"
+      href: lesson-6/README.md
+    - name: "Lesson 35.7: FaultSchedule for Timed Chaos"
+      href: lesson-7/README.md
+    - name: "Lesson 35.8: Circuit Breaker"
+      href: lesson-8/README.md

@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-consumer-patterns",
+    "title": "Advanced Consumer Patterns",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "offset-management",
+            "title": "Manual Offset Management",
+            "text": "Disable auto-commit to control exactly when offsets are committed. Choose at-most-once (commit before processing), at-least-once (commit after), or exactly-once (transactional).",
+            "attachTo": { "element": "#offset-management-strategies", "on": "bottom" }
+        },
+        {
+            "id": "seek-operations",
+            "title": "Seek Operations",
+            "text": "Navigate to specific offsets, timestamps, or partition boundaries. Seek to beginning to reprocess all messages, seek to end to skip to latest, or seek to a specific offset.",
+            "attachTo": { "element": "#seek-operations-flow", "on": "bottom" }
+        },
+        {
+            "id": "pause-resume",
+            "title": "Pause and Resume",
+            "text": "Pause specific partitions for backpressure handling, priority processing, resource management, or error recovery. Resume them when ready to continue processing.",
+            "attachTo": { "element": "#pause--resume-flow", "on": "bottom" }
+        },
+        {
+            "id": "delivery-guarantees",
+            "title": "Delivery Guarantees",
+            "text": "At-most-once may lose messages but never duplicates. At-least-once never loses but may reprocess. Exactly-once guarantees both but with higher latency.",
+            "attachTo": { "element": "#delivery-guarantees-summary", "on": "bottom" }
+        },
+        {
+            "id": "architecture",
+            "title": "Consumer Architecture",
+            "text": "Advanced consumers combine offset managers, flow controllers, and checkpoint stores to provide fine-grained control over message processing and partition assignment.",
+            "attachTo": { "element": "#advanced-consumer-architecture-overview", "on": "bottom" }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "id": "bootcamp-mcp-agents",
+    "title": "MCP Server and AI Agents",
+    "triggerMode": "button",
+    "steps": [
+        {
+            "id": "why-mcp",
+            "title": "AI-Powered Operations",
+            "text": "The Model Context Protocol enables AI assistants to interact with Surgewave using natural language commands, conversational debugging, and automated remediation.",
+            "attachTo": { "element": "#why-mcp-and-ai-agents-matter", "on": "bottom" }
+        },
+        {
+            "id": "mcp-architecture",
+            "title": "MCP Architecture",
+            "text": "AI assistants communicate via JSON-RPC to an MCP server that exposes tools, resources, and prompts. The server translates tool invocations into Surgewave client operations.",
+            "attachTo": { "element": "#mcp-architecture-overview", "on": "bottom" }
+        },
+        {
+            "id": "core-concepts",
+            "title": "MCP Core Concepts",
+            "text": "Tools are functions the AI can invoke. Resources are data it can read. Prompts are templates for common operations. Transport can be stdio or HTTP/SSE.",
+            "attachTo": { "element": "#mcp-core-concepts", "on": "bottom" }
+        },
+        {
+            "id": "use-cases",
+            "title": "Use Cases",
+            "text": "Natural language operations, automated monitoring agents, data exploration, workflow automation, and intelligent message routing all become possible with Surgewave MCP integration.",
+            "attachTo": { "element": "#use-cases-for-surgewave--ai-agents", "on": "bottom" }
+        },
+        {
+            "id": "best-practices",
+            "title": "Best Practices",
+            "text": "Secure your MCP server with authentication, limit tool permissions, log all invocations for audit trails, rate limit AI operations, and validate all inputs.",
+            "attachTo": { "element": "#best-practices", "on": "bottom" }
+        }
+    ]
+}
