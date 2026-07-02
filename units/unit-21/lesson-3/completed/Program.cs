@@ -5,7 +5,7 @@ using Kuestenlogik.Surgewave.Broker;
 using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
-// using Kuestenlogik.Surgewave.Client.Admin; // TODO: Admin client not yet implemented
+// using Kuestenlogik.Surgewave.Client.Native.Operations.Admin; // TODO: Admin client not yet implemented
 using Kuestenlogik.Surgewave.Client.Consumer;
 
 public class Program

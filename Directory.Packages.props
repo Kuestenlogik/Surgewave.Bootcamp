@@ -5,13 +5,13 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- Surgewave Core (from local or CI NuGet feed) -->
-    <PackageVersion Include="Kuestenlogik.Surgewave.Plugins" Version="0.3.0" />
-    <PackageVersion Include="Kuestenlogik.Surgewave.Client" Version="0.3.0" />
-    <PackageVersion Include="Kuestenlogik.Surgewave.Core" Version="0.3.0" />
-    <PackageVersion Include="Kuestenlogik.Surgewave.Runtime" Version="0.3.0" />
-    <PackageVersion Include="Kuestenlogik.Surgewave.Broker" Version="0.3.0" />
-    <PackageVersion Include="Kuestenlogik.Surgewave.Streams" Version="0.3.0" />
-    <PackageVersion Include="Kuestenlogik.Surgewave.Compatibility.Confluent.Kafka" Version="0.3.0" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Plugins" Version="0.3.1" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Client" Version="0.3.1" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Core" Version="0.3.1" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Runtime" Version="0.3.1" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Broker" Version="0.3.1" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Streams" Version="0.3.1" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Compatibility.Confluent.Kafka" Version="0.3.1" />
     <!-- Testing -->
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageVersion Include="xunit" Version="2.9.3" />
@@ -24,8 +24,8 @@
     <!-- Web -->
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     <!-- Schema Registry -->
-    <PackageVersion Include="Kuestenlogik.Surgewave.Client.SchemaRegistry" Version="0.3.0" />
-    <PackageVersion Include="Kuestenlogik.Surgewave.Schema.Registry" Version="0.3.0" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Client.SchemaRegistry" Version="0.3.1" />
+    <PackageVersion Include="Kuestenlogik.Surgewave.Schema.Registry" Version="0.3.1" />
     <!-- Reactive -->
     <PackageVersion Include="System.Reactive" Version="6.1.0" />
     <!-- Surgewave.AI packages -->

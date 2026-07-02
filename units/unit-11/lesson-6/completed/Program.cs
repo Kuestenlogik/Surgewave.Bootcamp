@@ -7,7 +7,7 @@ using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
-using Kuestenlogik.Surgewave.Client.Admin;
+using Kuestenlogik.Surgewave.Client.Native.Operations.Admin;
 
 public record BenchmarkResult(string Label, double ThroughputMbps, double P50Ms, double P99Ms);
 
