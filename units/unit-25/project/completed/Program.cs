@@ -3,6 +3,7 @@
 
 using System.Collections.Concurrent;
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Abstractions;
@@ -19,7 +20,7 @@ Console.WriteLine("[Surgewave] Starting embedded broker...");
 
 await using var surgewave = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .Build()
     .StartAsync();
 

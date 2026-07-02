@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Text;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -102,7 +103,7 @@ Console.WriteLine("--- Demo 3: Record Counter Metrics ---");
 // Start embedded broker
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9092)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

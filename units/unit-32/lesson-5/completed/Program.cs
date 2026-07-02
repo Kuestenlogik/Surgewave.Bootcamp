@@ -3,6 +3,7 @@
 
 using System.Diagnostics;
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -16,14 +17,14 @@ Console.WriteLine("--- Cluster Setup ---");
 
 var onPremise = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
 
 var cloud = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

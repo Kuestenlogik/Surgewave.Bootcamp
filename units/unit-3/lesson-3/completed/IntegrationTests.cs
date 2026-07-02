@@ -4,6 +4,7 @@
 using Xunit;
 using System.Runtime.CompilerServices;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -19,7 +20,7 @@ public class SurgewaveFixture : IAsyncLifetime
     {
         Runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();

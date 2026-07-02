@@ -9,6 +9,7 @@
 // Follow the instructions in INSTRUCTIONS.md to complete the TODOs below.
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -26,7 +27,7 @@ Console.WriteLine();
 Console.WriteLine("Starting primary cluster...");
 await using var primaryRuntime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -35,7 +36,7 @@ Console.WriteLine($"  Primary started on port {primaryRuntime.Port}");
 Console.WriteLine("Starting secondary cluster...");
 await using var secondaryRuntime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

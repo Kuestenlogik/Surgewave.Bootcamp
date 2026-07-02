@@ -4,6 +4,7 @@
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client.Native;
 using Microsoft.Extensions.Hosting;
@@ -19,7 +20,7 @@ Console.WriteLine("[Startup] Initializing Surgewave client...");
 // Create and register the embedded runtime
 var surgewave = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .Build()
     .StartAsync();
 

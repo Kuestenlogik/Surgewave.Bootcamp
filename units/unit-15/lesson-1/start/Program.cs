@@ -9,6 +9,7 @@
 // Follow the instructions in INSTRUCTIONS.md to complete the TODOs below.
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 
 Console.WriteLine("=== Surgewave Bootcamp: Lesson 20.1 - Gateway Architecture ===");
@@ -17,7 +18,7 @@ Console.WriteLine();
 // Start an in-memory Surgewave broker
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

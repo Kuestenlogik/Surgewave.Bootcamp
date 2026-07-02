@@ -2,6 +2,7 @@
 // Build a comprehensive test suite for Surgewave Producer/Consumer
 
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -27,7 +28,7 @@ public class SurgewaveFixture // TODO: Add IAsyncLifetime interface
         // TODO: Create and start the runtime
         // Hint: await SurgewaveRuntime.CreateBuilder()
         //           .WithPort(0)
-        //           .WithStorageMode(StorageMode.Memory)
+        //           .WithStorageEngine(StorageEngines.Memory)
         //           .WithAutoCreateTopics(true)
         //           .Build()
         //           .StartAsync();
@@ -338,7 +339,7 @@ public class Program
         {
             await using var runtime = await SurgewaveRuntime.CreateBuilder()
                 .WithPort(0)
-                .WithStorageMode(StorageMode.Memory)
+                .WithStorageEngine(StorageEngines.Memory)
                 .WithAutoCreateTopics(true)
                 .Build()
                 .StartAsync();

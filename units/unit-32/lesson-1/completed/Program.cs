@@ -2,6 +2,7 @@
 // COMPLETED SOLUTION
 
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -27,7 +28,7 @@ Console.WriteLine("--- Starting Multi-Region Clusters ---");
 // US East (Primary - AWS)
 var usEast = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -38,7 +39,7 @@ Console.WriteLine($"[{clusterConfigs["us-east-1"].Region}] Primary cluster start
 // EU West (Secondary - Azure)
 var euWest = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -49,7 +50,7 @@ Console.WriteLine($"[{clusterConfigs["eu-west-1"].Region}] Secondary cluster sta
 // AP South (Edge - GCP)
 var apSouth = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

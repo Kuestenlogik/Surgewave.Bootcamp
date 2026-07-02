@@ -8,6 +8,7 @@
 // This demo simulates the migration pattern using Surgewave's native client.
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -22,7 +23,7 @@ public class Program
         // Start Surgewave broker
         await using var runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(9092)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();

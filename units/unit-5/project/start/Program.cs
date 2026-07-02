@@ -3,6 +3,7 @@
 
 using System.Text.Json;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Streams;
 using Kuestenlogik.Surgewave.Streams.Windows;
@@ -68,7 +69,7 @@ Console.WriteLine("[Setup] Starting Surgewave Streams application...");
 
 // await using var runtime = await SurgewaveRuntime.CreateBuilder()
 //     .WithPort(9092)
-//     .WithStorageMode(StorageMode.Memory)
+//     .WithStorageEngine(StorageEngines.Memory)
 //     .WithAutoCreateTopics(true)
 //     .Build()
 //     .StartAsync();

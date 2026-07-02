@@ -3,6 +3,7 @@
 
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client.Native;
 using Kuestenlogik.Surgewave.Broker;
@@ -77,7 +78,7 @@ var jsonOptions = new JsonSerializerOptions
 // Start embedded broker
 await using var surgewave = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .Build()
     .StartAsync();
 

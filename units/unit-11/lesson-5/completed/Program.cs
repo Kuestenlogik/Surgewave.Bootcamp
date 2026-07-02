@@ -2,6 +2,7 @@
 // COMPLETED SOLUTION
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -137,14 +138,14 @@ public class Program
 
         await using var surgewave = await SurgewaveRuntime.CreateBuilder()
             .WithPort(9092)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();
 
         await using var kafka = await SurgewaveRuntime.CreateBuilder()
             .WithPort(9093)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();
@@ -161,7 +162,7 @@ public class Program
 
         for (int i = 1; i <= 20; i++)
             await kafkaProducer.ProduceAsync("orders", $"order-{i:D3}",
-                $"""{{ "id": {i}, "total": {i * 9.99:F2} }}""");
+                $$"""{ "id": {{i}}, "total": {{i * 9.99:F2}} }""");
 
         Console.WriteLine("  20 orders seeded into Kafka");
         Console.WriteLine();

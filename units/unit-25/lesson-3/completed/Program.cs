@@ -3,6 +3,7 @@
 
 using Kuestenlogik.Surgewave.Broker;
 using Kuestenlogik.Surgewave.Client;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 
 Console.WriteLine("=== Surgewave Bootcamp: Lesson 16.3 - Quota Management ===");
@@ -76,7 +77,7 @@ Console.WriteLine("--- Surgewave Runtime Demo ---");
 Console.WriteLine("Starting runtime on dynamic port...");
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

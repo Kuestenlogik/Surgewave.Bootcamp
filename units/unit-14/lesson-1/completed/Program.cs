@@ -5,6 +5,7 @@ using System.Buffers.Binary;
 using System.Net.Sockets;
 using System.Text;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 
 Console.WriteLine("=== Surgewave Bootcamp: Lesson 19.1 - Protocol Basics ===");
@@ -13,7 +14,7 @@ Console.WriteLine();
 // Start an in-memory Surgewave broker
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

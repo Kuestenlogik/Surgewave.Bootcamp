@@ -3,6 +3,7 @@
 
 using System.Diagnostics;
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -19,7 +20,7 @@ var clusters = new Dictionary<string, RegionCluster>();
 // US East (Primary Cloud)
 var usEast = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -30,7 +31,7 @@ Console.WriteLine($"[us-east-1] Started on port {usEast.Port} - US Cloud (Virgin
 // EU West (GDPR-compliant)
 var euWest = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -41,7 +42,7 @@ Console.WriteLine($"[eu-west-1] Started on port {euWest.Port} - EU Cloud (Irelan
 // APAC (Singapore)
 var apac = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -52,7 +53,7 @@ Console.WriteLine($"[ap-southeast-1] Started on port {apac.Port} - APAC Cloud (S
 // On-Premise (Sensitive Data)
 var onPrem = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

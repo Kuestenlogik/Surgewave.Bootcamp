@@ -2,6 +2,7 @@
 // COMPLETED SOLUTION
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 
@@ -15,7 +16,7 @@ public class Program
         // Start an embedded broker
         await using var runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(false)  // We'll create topics manually
             .WithPartitions(3)
             .Build()

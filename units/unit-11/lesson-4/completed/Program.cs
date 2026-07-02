@@ -2,6 +2,7 @@
 // COMPLETED SOLUTION
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -153,7 +154,7 @@ public class Program
         // Set up migration environment
         await using var surgewave = await SurgewaveRuntime.CreateBuilder()
             .WithPort(9092)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();

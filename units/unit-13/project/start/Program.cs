@@ -4,6 +4,7 @@
 using System.Collections.Concurrent;
 using System.Text.Json;
 using Kuestenlogik.Surgewave.Client;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Broker;
 
@@ -60,7 +61,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Hint: Create an embedded Surgewave broker and producers/consumers:
 //       var runtime = await SurgewaveRuntime.CreateBuilder()
 //           .WithPort(0)
-//           .WithStorageMode(StorageMode.Memory)
+//           .WithStorageEngine(StorageEngines.Memory)
 //           .WithAutoCreateTopics(true)
 //           .Build()
 //           .StartAsync();

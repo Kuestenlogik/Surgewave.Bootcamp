@@ -4,6 +4,7 @@
 using System.Collections.Concurrent;
 using System.Text.Json;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -20,7 +21,7 @@ var priorityCount = 0;
 // Start embedded broker using SurgewaveRuntime
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)  // Auto-assign port
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(false)  // We'll create topics explicitly
     .Build()
     .StartAsync();

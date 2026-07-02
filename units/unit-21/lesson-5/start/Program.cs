@@ -9,6 +9,7 @@
 
 using System.Diagnostics;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 
@@ -21,7 +22,7 @@ public class Program
 
         await using var runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(9092)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();

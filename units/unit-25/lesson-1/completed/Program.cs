@@ -3,6 +3,7 @@
 
 using Kuestenlogik.Surgewave.Broker;
 using Kuestenlogik.Surgewave.Client;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 
 Console.WriteLine("=== Surgewave Bootcamp: Lesson 16.1 - Tenant Isolation Concepts ===");
@@ -44,7 +45,7 @@ Console.WriteLine($"Current tenant: {currentTenant.TenantId}");
 Console.WriteLine("Starting Surgewave runtime on dynamic port...");
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

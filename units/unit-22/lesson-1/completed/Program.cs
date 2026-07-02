@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Text;
 using Microsoft.Extensions.Logging;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -107,7 +108,7 @@ Console.WriteLine("--- Demo 6: Full Example with Surgewave ---");
 // Start embedded broker
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9092)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

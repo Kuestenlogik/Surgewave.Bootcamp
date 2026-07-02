@@ -3,6 +3,7 @@
 
 using System.Diagnostics;
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -20,7 +21,7 @@ Console.WriteLine("--- Setting Up Regional Clusters ---");
 // US East
 var usEast = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -32,7 +33,7 @@ Console.WriteLine($"[us-east-1] Started on port {usEast.Port} (Rack: us-east-1a)
 // EU West
 var euWest = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -44,7 +45,7 @@ Console.WriteLine($"[eu-west-1] Started on port {euWest.Port} (Rack: eu-west-1a)
 // AP Southeast
 var apSoutheast = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

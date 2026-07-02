@@ -29,7 +29,7 @@ Console.WriteLine("Starting embedded Surgewave broker...");
 
 // TODO: Start the embedded broker with:
 //   .WithPort(0)
-//   .WithStorageMode(StorageMode.Memory)
+//   .WithStorageEngine(StorageEngines.Memory)
 //   .WithAutoCreateTopics(true)
 
 // Your code here...

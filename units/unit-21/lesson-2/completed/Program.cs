@@ -2,6 +2,7 @@
 // COMPLETED SOLUTION
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 // using Kuestenlogik.Surgewave.Client.Admin; // TODO: Admin client not yet implemented
@@ -19,14 +20,14 @@ public class Program
         await using var broker1 = await SurgewaveRuntime.CreateBuilder()
             .WithBrokerId(1)
             .WithPort(9092)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .Build()
             .StartAsync();
 
         await using var broker2 = await SurgewaveRuntime.CreateBuilder()
             .WithBrokerId(2)
             .WithPort(9093)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             // .WithClusterSeeds("localhost:9092") // TODO: Clustering configuration not yet available via builder
             .Build()
             .StartAsync();
@@ -34,7 +35,7 @@ public class Program
         await using var broker3 = await SurgewaveRuntime.CreateBuilder()
             .WithBrokerId(3)
             .WithPort(9094)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             // .WithClusterSeeds("localhost:9092") // TODO: Clustering configuration not yet available via builder
             .Build()
             .StartAsync();

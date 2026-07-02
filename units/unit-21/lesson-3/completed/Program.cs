@@ -2,6 +2,7 @@
 // COMPLETED SOLUTION
 
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 // using Kuestenlogik.Surgewave.Client.Admin; // TODO: Admin client not yet implemented
@@ -17,7 +18,7 @@ public class Program
         // Start broker with metrics endpoint
         await using var runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(9092)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             // .WithMetricsPort(9090) // TODO: Not yet implemented in Surgewave
             .Build()

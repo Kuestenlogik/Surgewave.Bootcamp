@@ -10,6 +10,7 @@
 
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -47,7 +48,7 @@ async Task RunInteractiveMode()
     // TODO: Step 1 - Start Surgewave runtime (or connect to existing cluster)
     // await using var runtime = await SurgewaveRuntime.CreateBuilder()
     //     .WithPort(0)
-    //     .WithStorageMode(StorageMode.Memory)
+    //     .WithStorageEngine(StorageEngines.Memory)
     //     .WithAutoCreateTopics(true)
     //     .Build()
     //     .StartAsync();

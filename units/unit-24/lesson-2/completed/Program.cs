@@ -3,6 +3,7 @@
 
 using System.Collections.Concurrent;
 using Kuestenlogik.Surgewave.Broker;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using Kuestenlogik.Surgewave.Client.Consumer;
@@ -14,7 +15,7 @@ Console.WriteLine();
 Console.WriteLine("Starting source cluster (DC-A)...");
 await using var sourceRuntime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -23,7 +24,7 @@ Console.WriteLine($"  Source cluster started on port {sourceRuntime.Port}");
 Console.WriteLine("Starting target cluster (DC-B)...");
 await using var targetRuntime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
