@@ -23,7 +23,7 @@ public class SurgewaveFixture // TODO: Add IAsyncLifetime interface
     // - Create a SurgewaveRuntime with Port 0 (auto-assign) and Memory storage
     // - Enable auto-create topics
     // - Start the runtime
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         // TODO: Create and start the runtime
         // Hint: await SurgewaveRuntime.CreateBuilder()
@@ -36,7 +36,7 @@ public class SurgewaveFixture // TODO: Add IAsyncLifetime interface
     }
 
     // TODO: Implement DisposeAsync to clean up runtime
-    public async Task DisposeAsync()
+    public async ValueTask DisposeAsync()
     {
         // TODO: Dispose the runtime
         await Task.CompletedTask;

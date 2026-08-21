@@ -20,13 +20,13 @@ public class SurgewaveContainerFixture : IAsyncLifetime
     private ISurgewaveRuntime? _runtime;
     public int Port { get; private set; }
 
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         // TODO: Start embedded broker (simulating container startup)
         throw new NotImplementedException();
     }
 
-    public async Task DisposeAsync()
+    public async ValueTask DisposeAsync()
     {
         // TODO: Dispose runtime
         throw new NotImplementedException();

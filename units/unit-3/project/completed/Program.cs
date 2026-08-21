@@ -23,7 +23,7 @@ public class SurgewaveFixture : IAsyncLifetime
     public SurgewaveRuntime Runtime { get; private set; } = null!;
     public int Port => Runtime.Port;
 
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         Runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
@@ -35,7 +35,7 @@ public class SurgewaveFixture : IAsyncLifetime
         Console.WriteLine($"[Fixture] Surgewave broker started on port {Port}");
     }
 
-    public async Task DisposeAsync()
+    public async ValueTask DisposeAsync()
     {
         if (Runtime != null)
         {

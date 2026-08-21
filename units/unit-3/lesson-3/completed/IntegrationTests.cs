@@ -16,7 +16,7 @@ public class SurgewaveFixture : IAsyncLifetime
     public SurgewaveRuntime Runtime { get; private set; } = null!;
     public int Port => Runtime.Port;
 
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         Runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
@@ -26,7 +26,7 @@ public class SurgewaveFixture : IAsyncLifetime
             .StartAsync();
     }
 
-    public async Task DisposeAsync()
+    public async ValueTask DisposeAsync()
     {
         await Runtime.DisposeAsync();
     }

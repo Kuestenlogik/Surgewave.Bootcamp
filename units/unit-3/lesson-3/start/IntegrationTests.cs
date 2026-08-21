@@ -22,13 +22,13 @@ public class SurgewaveFixture : IAsyncLifetime
     public ISurgewaveRuntime Runtime { get; private set; } = null!;
     public int Port => Runtime.Port;
 
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         // TODO: Start the embedded broker
         throw new NotImplementedException();
     }
 
-    public async Task DisposeAsync()
+    public async ValueTask DisposeAsync()
     {
         // TODO: Dispose the runtime
         throw new NotImplementedException();

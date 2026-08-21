@@ -17,7 +17,7 @@ public class SurgewaveContainerFixture : IAsyncLifetime
     private SurgewaveRuntime? _runtime;
     public int Port { get; private set; }
 
-    public async Task InitializeAsync()
+    public async ValueTask InitializeAsync()
     {
         // Simulating container startup with embedded broker
         // When Surgewave has a Docker image, replace with:
@@ -38,7 +38,7 @@ public class SurgewaveContainerFixture : IAsyncLifetime
         Port = _runtime.Port;
     }
 
-    public async Task DisposeAsync()
+    public async ValueTask DisposeAsync()
     {
         if (_runtime != null)
             await _runtime.DisposeAsync();
