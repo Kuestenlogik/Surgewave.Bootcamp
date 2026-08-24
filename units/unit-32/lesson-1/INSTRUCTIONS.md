@@ -49,7 +49,7 @@ var apSouthConfig = new ClusterConfig("ap-south-1", "AP South", "GCP", 0, Cluste
 // Start US East cluster (Primary)
 var usEast = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -59,7 +59,7 @@ Console.WriteLine($"[{usEastConfig.Region}] Primary cluster started on port {usE
 // Start EU West cluster (Secondary)
 var euWest = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

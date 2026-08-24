@@ -41,7 +41,7 @@ public class SurgewaveContainerFixture : IAsyncLifetime
         // When Docker image exists, replace with actual container
         _runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();

@@ -8,7 +8,7 @@ Follow these step-by-step instructions to complete the lesson.
 // Surgewave broker with Kafka-compatible settings
 var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9092)  // Standard Kafka port
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

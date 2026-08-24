@@ -49,7 +49,7 @@ public async Task TestName_Scenario_ExpectedBehavior()
     // Arrange - Set up broker, producer, consumer
     await using var runtime = await SurgewaveRuntime.CreateBuilder()
         .WithPort(0)
-        .WithStorageMode(StorageMode.Memory)
+        .WithStorageEngine(StorageEngines.Memory)
         .Build()
         .StartAsync();
 

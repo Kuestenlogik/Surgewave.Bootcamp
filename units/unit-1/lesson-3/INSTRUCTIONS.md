@@ -138,7 +138,7 @@ Console.WriteLine("Starting embedded Surgewave broker...");
 
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -240,8 +240,8 @@ dotnet run
 Run the program twice. The second time should show no messages (all already committed):
 
 ```csharp
-// Change WithStorageMode to persist data:
-.WithStorageMode(StorageMode.FileSystem)
+// Change WithStorageEngine to persist data:
+.WithStorageEngine(StorageEngines.File)
 .WithDataDirectory("./surgewave-data")
 ```
 

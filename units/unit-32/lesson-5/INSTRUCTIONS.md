@@ -10,7 +10,7 @@ Simulate on-premise and cloud environments:
 // On-premise cluster (primary, holds sensitive data)
 var onPremise = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -18,7 +18,7 @@ var onPremise = await SurgewaveRuntime.CreateBuilder()
 // Cloud cluster (secondary, holds aggregated/non-sensitive data)
 var cloud = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

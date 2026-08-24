@@ -9,7 +9,7 @@ Create an embedded Surgewave broker:
 ```csharp
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)  // Dynamic port
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

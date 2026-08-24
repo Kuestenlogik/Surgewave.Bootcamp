@@ -10,7 +10,7 @@ Simulate two brokers — one representing Kafka (port 9093) and one Surgewave (p
 // Surgewave broker (migration target)
 await using var surgewave = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9092)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -18,7 +18,7 @@ await using var surgewave = await SurgewaveRuntime.CreateBuilder()
 // "Kafka" broker (existing system, simulated as a second Surgewave instance)
 await using var kafka = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9093)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

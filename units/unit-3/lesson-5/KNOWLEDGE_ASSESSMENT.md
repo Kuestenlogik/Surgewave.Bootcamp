@@ -83,7 +83,7 @@ public class ProducerBenchmarks
     {
         _runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .Build()
             .StartAsync();
 
@@ -129,7 +129,7 @@ public class ProducerBenchmarks
     {
         _runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .Build()
             .StartAsync();
 

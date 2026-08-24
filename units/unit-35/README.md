@@ -251,7 +251,7 @@ The easiest way to wire chaos into a runtime:
 var engine = new ChaosEngine();
 var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithBrokerId(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithChaosEngine(engine, loggerFactory)  // Wraps storage with chaos
     .Build()
     .StartAsync();

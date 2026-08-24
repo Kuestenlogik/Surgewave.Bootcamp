@@ -52,7 +52,7 @@ public async Task Producer_SendsMessage_Successfully()
     // Arrange - Start embedded broker
     await using var runtime = await SurgewaveRuntime.CreateBuilder()
         .WithPort(0)
-        .WithStorageMode(StorageMode.Memory)
+        .WithStorageEngine(StorageEngines.Memory)
         .Build()
         .StartAsync();
 
@@ -107,7 +107,7 @@ public class SurgewaveFixture : IAsyncLifetime
     {
         Runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .Build()
             .StartAsync();
     }

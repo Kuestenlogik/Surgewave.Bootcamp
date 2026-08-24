@@ -57,7 +57,7 @@ Console.WriteLine("Starting embedded Surgewave broker...");
 
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)  // Auto-assign an available port
-    .WithStorageMode(StorageMode.Memory)  // Use in-memory storage for this lesson
+    .WithStorageEngine(StorageEngines.Memory)  // Use in-memory storage for this lesson
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -69,7 +69,7 @@ Console.WriteLine();
 **What this does:**
 - `SurgewaveRuntime.CreateBuilder()` creates a broker configuration
 - `WithPort(0)` auto-assigns an available port
-- `WithStorageMode(StorageMode.Memory)` uses RAM for fast testing
+- `WithStorageEngine(StorageEngines.Memory)` uses RAM for fast testing
 - `WithAutoCreateTopics(true)` creates topics on first use
 - `Build().StartAsync()` starts the broker
 - `await using` ensures proper cleanup when we're done
@@ -164,7 +164,7 @@ Console.WriteLine("Starting embedded Surgewave broker...");
 
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

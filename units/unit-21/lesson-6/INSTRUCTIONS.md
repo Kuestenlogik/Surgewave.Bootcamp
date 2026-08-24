@@ -9,7 +9,7 @@ Create an embedded Surgewave broker for admin operations:
 ```csharp
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)                           // Auto-assign port
-    .WithStorageMode(StorageMode.Memory)   // In-memory for demo
+    .WithStorageEngine(StorageEngines.Memory)   // In-memory for demo
     .WithAutoCreateTopics(false)           // We'll create topics manually
     .WithPartitions(3)                     // Default partitions
     .Build()

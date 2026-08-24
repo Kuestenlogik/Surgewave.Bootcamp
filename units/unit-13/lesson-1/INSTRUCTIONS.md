@@ -74,7 +74,7 @@ public class SurgewaveBrokerService : IHostedService, IAsyncDisposable
 
         _runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)  // Auto-assign port
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();
@@ -317,7 +317,7 @@ public class SurgewaveBrokerService : IHostedService, IAsyncDisposable
 
         _runtime = await SurgewaveRuntime.CreateBuilder()
             .WithPort(0)
-            .WithStorageMode(StorageMode.Memory)
+            .WithStorageEngine(StorageEngines.Memory)
             .WithAutoCreateTopics(true)
             .Build()
             .StartAsync();

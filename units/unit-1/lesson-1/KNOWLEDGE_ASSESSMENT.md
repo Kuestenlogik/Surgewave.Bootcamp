@@ -90,7 +90,7 @@ Console.WriteLine($"Found {topics.Count} topics");
 ```csharp
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(_____)  // What value for auto-assign?
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .Build()
     .StartAsync();
 
@@ -102,7 +102,7 @@ Console.WriteLine($"Broker running on port {runtime._____}");  // How to get the
 ```csharp
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)  // 0 = auto-assign available port
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .Build()
     .StartAsync();
 

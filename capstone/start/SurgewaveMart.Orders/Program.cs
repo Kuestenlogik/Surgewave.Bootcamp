@@ -2,6 +2,7 @@
 // Handles order creation, validation, and lifecycle management
 
 using System.Text.Json;
+using Kuestenlogik.Surgewave.Core.Storage;
 using Kuestenlogik.Surgewave.Runtime;
 using Kuestenlogik.Surgewave.Client;
 using SurgewaveMart.Shared;
@@ -14,7 +15,7 @@ Console.WriteLine("=== SurgewaveMart Order Service ===\n");
 // Start embedded broker (in production, connect to cluster)
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

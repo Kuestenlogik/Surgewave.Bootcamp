@@ -8,7 +8,7 @@ Follow these step-by-step instructions to complete the lesson.
 // Surgewave broker (new)
 var surgewave = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9092)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .Build()
     .StartAsync();
 

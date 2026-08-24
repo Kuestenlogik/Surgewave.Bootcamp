@@ -27,7 +27,7 @@ First, create and start the Surgewave broker that the Gateway will connect to:
 ```csharp
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)  // Dynamic port
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

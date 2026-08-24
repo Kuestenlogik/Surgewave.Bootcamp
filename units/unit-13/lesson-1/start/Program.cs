@@ -33,7 +33,7 @@ app.Run();
 // - Expose the Port property for other services to use
 // - Clean up the broker in StopAsync
 //
-// Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0), WithStorageMode(StorageMode.Memory)
+// Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0), WithStorageEngine(StorageEngines.Memory)
 
 // TODO: Implement MessageConsumerService as a BackgroundService
 // This service should:

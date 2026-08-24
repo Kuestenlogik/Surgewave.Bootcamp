@@ -14,7 +14,7 @@ Console.WriteLine("=== Surgewave Bootcamp: Lesson 1.1 - Hello Surgewave ===");
 Console.WriteLine();
 
 // TODO: Step 1 - Start an embedded Surgewave broker
-// Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0) and WithStorageMode(StorageMode.Memory)
+// Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0) and WithStorageEngine(StorageEngines.Memory)
 // Don't forget await using for proper disposal!
 Console.WriteLine("Starting embedded Surgewave broker...");
 

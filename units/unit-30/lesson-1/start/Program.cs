@@ -16,7 +16,7 @@ Console.WriteLine("========================");
 Console.WriteLine();
 
 // TODO: Start embedded Surgewave broker
-// Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0), WithStorageMode(StorageMode.Memory)
+// Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0), WithStorageEngine(StorageEngines.Memory)
 
 // TODO: Create producer and consumer
 // Hint: Use new SurgewaveProducer<string, string>(options => { ... })

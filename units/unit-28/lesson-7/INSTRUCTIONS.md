@@ -9,7 +9,7 @@ Start an embedded Surgewave broker with memory storage:
 ```csharp
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(false)
     .Build()
     .StartAsync();

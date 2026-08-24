@@ -15,7 +15,7 @@ namespace Lesson2_1;
 public class ProducerTests
 {
     // TODO: Implement helper method to create embedded runtime
-    // Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0), WithStorageMode(StorageMode.Memory)
+    // Hint: Use SurgewaveRuntime.CreateBuilder() with WithPort(0), WithStorageEngine(StorageEngines.Memory)
     private static async Task<ISurgewaveRuntime> CreateRuntimeAsync()
     {
         // Your code here...

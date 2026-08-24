@@ -96,7 +96,7 @@ using Kuestenlogik.Surgewave.Client.Consumer;
 // Start embedded broker
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9092)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

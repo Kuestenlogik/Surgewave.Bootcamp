@@ -7,7 +7,7 @@ Follow these step-by-step instructions to complete the lesson.
 ```csharp
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(9092)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .WithSchemaRegistry()   // Enable Schema Registry
     .Build()

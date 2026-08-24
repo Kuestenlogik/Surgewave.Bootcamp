@@ -6,9 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Kuestenlogik.Surgewave.Broker" />
-    <PackageReference Include="Kuestenlogik.Surgewave.Runtime" />
-    <PackageReference Include="Kuestenlogik.Surgewave.Client" />
-    <PackageReference Include="Kuestenlogik.Surgewave.Client.SchemaRegistry" />
+    <PackageReference Include="Kuestenlogik.Surgewave.Broker" Version="0.5.0" />
+    <PackageReference Include="Kuestenlogik.Surgewave.Runtime" Version="0.5.0" />
+    <PackageReference Include="Kuestenlogik.Surgewave.Client" Version="0.5.0" />
+    <PackageReference Include="Kuestenlogik.Surgewave.Client.SchemaRegistry" Version="0.3.1" />
   </ItemGroup>
 </Project>

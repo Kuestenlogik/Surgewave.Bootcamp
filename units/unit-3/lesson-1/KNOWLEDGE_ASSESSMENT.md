@@ -77,7 +77,7 @@ public async Task Producer_DeliversMessage_ReturnsValidOffset()
     // Arrange
     await using var runtime = await SurgewaveRuntime.CreateBuilder()
         .WithPort(____)
-        .WithStorageMode(StorageMode.Memory)
+        .WithStorageEngine(StorageEngines.Memory)
         .Build()
         .StartAsync();
 
@@ -102,7 +102,7 @@ public async Task Producer_DeliversMessage_ReturnsValidOffset()
     // Arrange
     await using var runtime = await SurgewaveRuntime.CreateBuilder()
         .WithPort(0)  // Auto-assign port
-        .WithStorageMode(StorageMode.Memory)
+        .WithStorageEngine(StorageEngines.Memory)
         .Build()
         .StartAsync();
 

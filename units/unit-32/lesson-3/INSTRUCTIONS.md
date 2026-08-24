@@ -43,7 +43,7 @@ Console.WriteLine("--- Starting Multi-Cloud Clusters ---");
 // AWS Cluster
 var awsCluster = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -53,7 +53,7 @@ Console.WriteLine($"[AWS] Surgewave cluster started on port {awsCluster.Port}");
 // Azure Cluster
 var azureCluster = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
@@ -63,7 +63,7 @@ Console.WriteLine($"[Azure] Surgewave cluster started on port {azureCluster.Port
 // GCP Cluster
 var gcpCluster = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)
+    .WithStorageEngine(StorageEngines.Memory)
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();

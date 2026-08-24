@@ -103,7 +103,7 @@ Generate messages and track their tier placement:
 // Start Surgewave broker with tiered storage simulation
 await using var runtime = await SurgewaveRuntime.CreateBuilder()
     .WithPort(0)
-    .WithStorageMode(StorageMode.Memory)  // Using memory for demo
+    .WithStorageEngine(StorageEngines.Memory)  // Using memory for demo
     .WithAutoCreateTopics(true)
     .Build()
     .StartAsync();
