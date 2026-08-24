@@ -10,5 +10,9 @@
     <PackageReference Include="Kuestenlogik.Surgewave.Runtime" Version="0.5.0" />
     <PackageReference Include="Kuestenlogik.Surgewave.Client" Version="0.5.0" />
     <PackageReference Include="Kuestenlogik.Surgewave.Client.SchemaRegistry" Version="0.3.1" />
+    <!-- Used directly by this lesson. It used to arrive transitively through the
+         Surgewave packages; from 0.5.0 it no longer does, and a lesson that calls
+         into a library should name it anyway. -->
+    <PackageReference Include="Google.Protobuf" Version="3.35.0" />
   </ItemGroup>
 </Project>
