@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build completed lessons
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      # The `start` variants are deliberately incomplete — they are what the reader
+      # fills in — so only `completed` (and the capstone) is expected to build. The
+      # solution is generated rather than checked in: a new lesson is then covered
+      # the moment it lands, instead of when someone remembers to add it.
+      #
+      # Why this job exists at all: two lessons were found broken the first time
+      # anything built them. units/unit-10/lesson-3 relied on Google.Protobuf arriving
+      # transitively, and units/unit-11/lesson-6 calls a type that has never existed in
+      # any published version. Both are free-tier lessons that could have been compiled
+      # at any point in the last year. Nothing did.
+      - name: Generate the solution of completed projects
+        run: |
+          set -euo pipefail
+
+          # Known broken, tracked in issue #2. Excluded by exact path so a rename
+          # turns into a loud failure here rather than a silent gap in coverage.
+          EXCLUDE="units/unit-11/lesson-6/completed/Lesson5_6.csproj"
+
+          find units capstone -name '*.csproj' -path '*completed*' \
+            -not -path '*/bin/*' -not -path '*/obj/*' | sort > all-completed.txt
+
+          if ! grep -qxF "$EXCLUDE" all-completed.txt; then
+            echo "::error::$EXCLUDE is no longer there. If it was fixed, drop this exclusion and close #2; if it moved, update the path."
+            exit 1
+          fi
+          grep -vxF "$EXCLUDE" all-completed.txt > completed.txt
+
+          { echo '<Solution>'
+            while read -r p; do printf '  <Project Path="%s" />\n' "$p"; done < completed.txt
+            echo '</Solution>'
+          } > ci-completed.slnx
+
+          # Test lessons run separately: `dotnet test` over a solution holding
+          # non-test projects exits 8 ("zero tests ran") for each of them.
+          grep -l '<IsTestProject>true</IsTestProject>' $(cat completed.txt) | sort > tests.txt
+
+          { echo '<Solution>'
+            while read -r p; do printf '  <Project Path="%s" />\n' "$p"; done < tests.txt
+            echo '</Solution>'
+          } > ci-tests.slnx
+
+          echo "completed projects: $(wc -l < completed.txt) (excluded: 1)"
+          echo "test lessons:       $(wc -l < tests.txt)"
+
+      - name: Build
+        run: dotnet build ci-completed.slnx -c Release
+
+      - name: Test
+        run: dotnet test --solution ci-tests.slnx -c Release --no-build

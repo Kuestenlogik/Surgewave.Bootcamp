@@ -416,3 +416,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# CI-generated solutions
+ci-completed.slnx
+ci-tests.slnx
+all-completed.txt
+completed.txt
+tests.txt
