@@ -1,0 +1,5 @@
+# Language guard allowlist — read by scripts/check-english.mjs.
+# Everything in this repository is English. An entry here excuses German that is
+# payload or domain data, never prose. Format: <path glob> | <line regex or *> | <reason>
+
+units/unit-2/lesson-7/README.md | keywordsDe|^\| .* \| `[^`]*` \| `[^`]*` \|$ | Payload: the lesson shows the German keyword list the intent engine matches, next to the English one.
