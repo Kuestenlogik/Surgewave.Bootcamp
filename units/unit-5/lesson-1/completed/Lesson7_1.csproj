@@ -11,6 +11,9 @@
     <PackageReference Include="Kuestenlogik.Surgewave.Broker" Version="0.5.0" />
     <PackageReference Include="Kuestenlogik.Surgewave.Runtime" Version="0.5.0" />
     <PackageReference Include="Kuestenlogik.Surgewave.Streams" Version="0.5.0" />
+    <!-- Surgewave.Streams 0.5.x still pulls Microsoft.Data.Sqlite 10.0.8 and with it SQLitePCLRaw 2.1.11
+         (GHSA-2m69-gcr7-jv3q); the direct reference lifts it to the patched 2.1.13. -->
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.13" />
   </ItemGroup>
 
 </Project>
